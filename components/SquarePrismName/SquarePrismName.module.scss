@@ -1,0 +1,138 @@
+@import "../../styles/colors.module.scss";
+
+.containerWrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  .sidesContainer {
+    height: 100px;
+    width: 750px;
+    perspective: 1000px;
+    .box {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(10deg) rotateX(-40deg);
+      transition: all 0.3s ease-in-out;
+      .side {
+        text-align: center;
+        color: black;
+        box-sizing: border-box;
+        position: absolute;
+        height: 100px;
+        p {
+          font-family: "Arial Black";
+          font-size: 5rem;
+          position: absolute;
+          top: -10px;
+          left: 50px;
+          transition: all 0.5s ease-in-out;
+          -webkit-text-stroke-width: 3px;
+          &.name.yellow {
+            color: $yellow-primary;
+          }
+        }
+      }
+
+      #left,
+      #right,
+      #top,
+      #bottom {
+        width: 750px;
+      }
+
+      #front,
+      #back {
+        width: 100px;
+      }
+
+      #top,
+      #bottom {
+        transform: rotateX(90deg);
+      }
+
+      #top,
+      #right {
+        p:hover {
+          color: transparent;
+        }
+      }
+
+      #front {
+        right: 700px;
+        background-color: #ffe26c;
+        transform: rotateY(-90deg);
+      }
+
+      #back {
+        left: 700px;
+        background-color: var(--dark-yellow);
+        transform: rotateY(90deg);
+      }
+
+      #left {
+        background-color: var(--dark-yellow);
+        transform: translateZ(-50px) rotateY(180deg);
+      }
+
+      #right {
+        //Last Name side
+        background-color: black;
+        transform: translateZ(50px);
+        p {
+          -webkit-text-stroke-color: $yellow-primary;
+          color: $yellow-primary;
+        }
+      }
+      #top {
+        //First name side
+        background: linear-gradient(180deg, $yellow-primary 0%, #ffdb49 100%);
+        top: -50px;
+        p {
+          -webkit-text-stroke-color: black;
+          color: black;
+        }
+      }
+
+      #bottom {
+        background-color: var(--dark-yellow);
+        top: 50px;
+      }
+    }
+  }
+
+  .frontEndDev {
+    height: 65px;
+    width: 296px;
+    position: relative;
+    margin-top: 1rem;
+    align-self: flex-end;
+    transform: skew(21deg, 0deg);
+    overflow: hidden;
+    .slidingText {
+      animation-name: slidingText;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      color: black;
+      text-decoration: none;
+      font-family: "Arial Black";
+      font-weight: 900;
+      font-size: 1.7rem;
+      position: absolute;
+      width: 296px;
+      top: 0;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes slidingText {
+  0% {
+    right: -296px;
+  }
+  100% {
+    right: 0px;
+  }
+}
