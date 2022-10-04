@@ -87,7 +87,11 @@
       }
       #top {
         //First name side
-        background: linear-gradient(180deg, $yellow-primary 0%, #ffdb49 100%);
+        background: linear-gradient(
+          180deg,
+          $yellow-primary 0%,
+          $yellow-light 100%
+        );
         top: -50px;
         p {
           -webkit-text-stroke-color: black;
@@ -106,7 +110,7 @@
     height: 65px;
     width: 296px;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
     align-self: flex-end;
     transform: skew(21deg, 0deg);
     overflow: hidden;
