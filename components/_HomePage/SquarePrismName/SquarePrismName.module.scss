@@ -8,13 +8,17 @@
     height: 100px;
     width: 750px;
     perspective: 1000px;
+    filter: drop-shadow(-8px 35px 10px rgba(0, 0, 0, 0.5));
+    animation: floating infinite 2s ease-in-out;
+    animation-delay: 2.5s;
     .box {
       height: 100%;
       width: 100%;
       position: relative;
       transform-style: preserve-3d;
-      transform: rotateY(10deg) rotateX(-40deg);
+      transform: rotateY(0deg) rotateX(-40deg);
       transition: all 0.3s ease-in-out;
+      animation: entryAnimation 3s ease-out;
       .side {
         text-align: center;
         color: black;
@@ -110,7 +114,7 @@
     height: 65px;
     width: 296px;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     align-self: flex-end;
     transform: skew(21deg, 0deg);
     overflow: hidden;
@@ -135,5 +139,37 @@
   }
   100% {
     right: 0px;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+    filter: drop-shadow(-8px 35px 10px rgba(0, 0, 0, 0.5));
+  }
+  50% {
+    transform: translate(0, 15px);
+    filter: drop-shadow(0px 11px 10px rgba(0, 0, 0, 0.4));
+  }
+  100% {
+    transform: translate(0, -0px);
+    filter: drop-shadow(-8px 35px 10px rgba(0, 0, 0, 0.5));
+  }
+}
+
+@keyframes entryAnimation {
+  0% {
+  }
+  30% {
+    transform: rotateY(0deg) rotateX(-40deg);
+  }
+  45% {
+    transform: rotateY(25deg) rotateX(-75deg) scale(1.1);
+  }
+  65% {
+    transform: rotateY(25deg) rotateX(-10deg) scale(1.1);
+  }
+  85% {
+    transform: rotateY(0deg) rotateX(-40deg);
   }
 }

@@ -29,6 +29,7 @@ const SideNav: React.FC = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                delay={100}
                 className={styles.navLink}
                 onSetActive={() => setPageVisible("home")}
               >
@@ -49,6 +50,7 @@ const SideNav: React.FC = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                delay={100}
                 className={styles.navLink}
                 onSetActive={() => setPageVisible("about")}
               >
@@ -69,6 +71,7 @@ const SideNav: React.FC = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                delay={100}
                 className={styles.navLink}
                 onSetActive={() => setPageVisible("projects")}
               >
@@ -89,6 +92,7 @@ const SideNav: React.FC = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                delay={100}
                 className={styles.navLink}
                 onSetActive={() => setPageVisible("contact")}
               >
