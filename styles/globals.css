@@ -16,3 +16,6 @@ a {
   margin: 0;
   cursor: none;
 }
+.pages-wrapper {
+  position: relative;
+}

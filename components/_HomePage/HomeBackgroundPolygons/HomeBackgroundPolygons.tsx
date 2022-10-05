@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./homeBackgroundPolygons.module.scss";
-const homeBackgroundPolygons = () => {
+const HomeBackgroundPolygons = () => {
   return (
     <>
       <div className={styles.bgPolygonTop}></div>
@@ -10,4 +10,4 @@ const homeBackgroundPolygons = () => {
   );
 };
 
-export default homeBackgroundPolygons;
+export default HomeBackgroundPolygons;
