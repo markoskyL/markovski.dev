@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import SideNav from "../components/SideNav/SideNav";
+import GeometricBackground from "../components/GeometricBackground/GeometricBackground";
+import Navigation from "../components/Navigation/Navigation";
 import AboutPage from "../components/_AboutPage/AboutPage";
 import ContactPage from "../components/_ContactPage/ContactPage";
 import HomePage from "../components/_HomePage/HomePage";
@@ -14,7 +15,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="pages-wrapper">
-        <SideNav />
+        <GeometricBackground />
+        <Navigation />
         <HomePage />
         <AboutPage />
         <ProjectsPage />
