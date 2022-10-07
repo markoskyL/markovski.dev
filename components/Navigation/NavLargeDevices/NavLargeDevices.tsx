@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NavLargeDevices.module.scss";
 import { Link } from "react-scroll/modules";
 
@@ -6,6 +6,7 @@ type pageVisibleTypes = "home" | "about" | "projects" | "contact";
 
 const NavLargeDevices = () => {
   const [pageVisible, setPageVisible] = useState<pageVisibleTypes>("home");
+
   return (
     <div className={styles.NavigationLargeDevices}>
       <div className={styles.sideNavInner}>
@@ -15,9 +16,7 @@ const NavLargeDevices = () => {
               pageVisible === "home" ? styles.active : ""
             }`}
           ></div>
-  
           <Link
-            suppressHydrationWarning={true}
             to="home"
             activeClass={styles.active}
             spy={true}
@@ -39,7 +38,6 @@ const NavLargeDevices = () => {
             }`}
           ></div>
           <Link
-            suppressHydrationWarning={true}
             to="about"
             activeClass={styles.active}
             spy={true}
@@ -61,7 +59,6 @@ const NavLargeDevices = () => {
             }`}
           ></div>
           <Link
-            suppressHydrationWarning={true}
             to="projects"
             activeClass={styles.active}
             spy={true}
@@ -83,7 +80,6 @@ const NavLargeDevices = () => {
             }`}
           ></div>
           <Link
-            suppressHydrationWarning={true}
             to="contact"
             activeClass={styles.active}
             spy={true}

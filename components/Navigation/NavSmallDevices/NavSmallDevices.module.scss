@@ -14,15 +14,18 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    &.clicked {
+      top: 0;
+    }
     .navLink {
       font-size: 3rem;
       transition: all 0.15s ease-in-out;
       color: #787648;
       z-index: 10;
-    }
-    .navLink.active {
-      transform: skew(0deg, 0deg) scale(1.1);
-      color: black;
+      &.active {
+        transform: skew(0deg, 0deg) scale(1.1);
+        color: black;
+      }
     }
     .navBg {
       position: absolute;
@@ -32,8 +35,5 @@
       background-color: rgba(251, 180, 0, 0.902);
       backdrop-filter: blur(6px);
     }
-  }
-  .navigation.clicked {
-    top: 0;
   }
 }

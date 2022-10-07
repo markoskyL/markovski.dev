@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
+import HamburgerBtn from "../Navbar/HamburgerBtn";
 import styles from "./NavSmallDevices.module.scss";
 import { Link } from "react-scroll";
 const NavSmallDevices = () => {
@@ -17,7 +17,6 @@ const NavSmallDevices = () => {
       >
         <div className={styles.navBg}></div>
         <Link
-          suppressHydrationWarning={true}
           to="home"
           activeClass={styles.active}
           spy={true}
@@ -31,7 +30,6 @@ const NavSmallDevices = () => {
           Home
         </Link>
         <Link
-          suppressHydrationWarning={true}
           to="about"
           activeClass={styles.active}
           spy={true}
@@ -45,7 +43,6 @@ const NavSmallDevices = () => {
           About
         </Link>
         <Link
-          suppressHydrationWarning={true}
           to="projects"
           activeClass={styles.active}
           spy={true}
@@ -59,7 +56,6 @@ const NavSmallDevices = () => {
           Projects
         </Link>
         <Link
-          suppressHydrationWarning={true}
           to="contact"
           activeClass={styles.active}
           spy={true}
