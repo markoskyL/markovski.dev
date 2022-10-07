@@ -1,4 +1,6 @@
-.projectsWrapper{
-    min-height: 100vh;
-    background-color: aquamarine;
+@import "../../styles/colors.module.scss";
+
+.projectsWrapper {
+  min-height: 100vh;
+  background-color: $yellow-light-primary;
 }

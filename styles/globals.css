@@ -15,4 +15,7 @@ a {
   margin: 0;
   cursor: none;
 }
-
+h1 {
+  z-index: 1000;
+  text-align: center;
+}

@@ -33,7 +33,7 @@ const SquarePrismName = () => {
             onMouseEnter={() => handleMouseEnter(70)}
             onMouseLeave={handleMouseLeave}
           >
-            <p>MARKOVSKI .</p>
+            <p>MARKOVSKI</p>
           </div>
           <div className={styles.side} id={styles.bottom}></div>
         </div>
