@@ -215,7 +215,7 @@
         background: linear-gradient(
           180deg,
           $yellow-primary 0%,
-          $yellow-light 100%
+          $yellow-primary 100%
         );
         top: -50px; // height / -2
         @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
