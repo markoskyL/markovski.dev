@@ -1,45 +1,68 @@
+@import "../../styles/breakpoints.module.scss";
 .aboutWrapper {
   padding: 7rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
   background: radial-gradient(
     40.91% 40.91% at 36.83% 59.09%,
     #fff8db 28.65%,
     #ffe993 100%
   );
-
-  .textAndImgWrapper {
-    display: flex;
+  .aboutInner {
     width: 70vw;
-    // justify-content: center;
-    // align-items: center;
-
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-right: 3rem;
-      width: 70%;
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 3.5rem;
-      }
-      p {
-        font-family: "Montserrat";
-        font-size: 1.5rem;
-        font-weight: 900;
-
-        .name {
-          font-family: "Arial Black";
-        }
+    @media screen and (max-width: $tablet-XS) {
+      width: 90vw;
+    }
+    @media screen and (min-width: $tablet-XS) and (max-width: $tablet-XL) {
+      width: 80vw;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 3.5rem;
+      width: 100%;
+      @media screen and (max-width: $tablet-XS) {
+        font-size: 2.5rem;
       }
     }
-    .imageWrapper {
-      height: 350px;
-      width: 350px;
-      // filter: drop-shadow(-17px 12px 30px rgba(0, 0, 0, 0.537));
+    .textAndImgWrapper {
+      display: flex;
+      @media screen and (max-width: $tablet-XL) {
+        flex-direction: column-reverse;
+      }
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        p {
+          font-family: "Montserrat";
+          font-size: 1.5rem;
+          font-weight: 900;
+          @media screen and (max-width: $tablet-XS) {
+            font-size: 1.2rem;
+          }
+          .name {
+            font-family: "Arial Black";
+          }
+        }
+      }
+      .imageWrapper {
+        max-width: 350px;
+        @media screen and (min-width: $phone-XS) and (max-width: $tablet-XS) {
+          position: absolute;
+          top: 100px;
+          right: 0px;
+          max-width: 150px;
+        }
+        @media screen and (min-width: $tablet-XS) and (max-width: $tablet-XL) {
+          position: absolute;
+          top: 100px;
+          right: 200px;
+          max-width: 150px;
+        }
+      }
     }
   }
 }
