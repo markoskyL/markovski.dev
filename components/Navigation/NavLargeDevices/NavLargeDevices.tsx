@@ -21,7 +21,7 @@ const NavLargeDevices = () => {
             activeClass={styles.active}
             spy={true}
             smooth={true}
-            offset={-200}
+            offset={-300}
             duration={500}
             delay={100}
             className={styles.navLink}
@@ -42,7 +42,7 @@ const NavLargeDevices = () => {
             activeClass={styles.active}
             spy={true}
             smooth={true}
-            offset={-200}
+            offset={-300}
             duration={500}
             delay={100}
             className={styles.navLink}
@@ -63,7 +63,7 @@ const NavLargeDevices = () => {
             activeClass={styles.active}
             spy={true}
             smooth={true}
-            offset={-200}
+            offset={-300}
             duration={500}
             delay={100}
             className={styles.navLink}

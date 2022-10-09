@@ -1,6 +1,10 @@
 @import "../../styles/colors.module.scss";
 
 .projectsWrapper {
+  background: radial-gradient(
+    49.95% 49.95% at 50% 50.05%,
+    #fff8db 0%,
+    #ffe993 100%
+  );
   min-height: 100vh;
-  background-image: url("../legoBg.jpeg");
 }

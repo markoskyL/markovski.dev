@@ -1,7 +1,11 @@
 @import "../../styles/colors.module.scss";
 
 .homeWrapper {
-  background-color: $yellow-light-primary;
+  background: radial-gradient(
+    49.95% 49.95% at 50% 50.05%,
+    #fff8db 0%,
+    #ffe993 100%
+  );
   min-height: 100vh;
   width: 100%;
   display: flex;
