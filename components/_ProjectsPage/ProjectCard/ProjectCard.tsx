@@ -38,7 +38,9 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           <p className={styles.description}>{props.description}</p>
           <div className={styles.technologies}>
             {props.technologies.map((tech) => (
-              <span className={styles.technology}>{tech}</span>
+              <span className={styles.technology} key={tech + "1"}>
+                {tech}
+              </span>
             ))}
           </div>
         </div>
