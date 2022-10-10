@@ -1,0 +1,92 @@
+@import "../../../styles/colors.module.scss";
+@import "../../../styles/breakpoints.module.scss";
+.cardWrapper {
+  display: flex;
+  gap: 1rem;
+  padding-right: 4rem;
+  margin-bottom: 9rem;
+  @media screen and (max-width: $laptop-XS) {
+    flex-direction: column-reverse;
+    padding-right: 0rem;
+  }
+  @media screen and (min-width: $laptop-XS) {
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  @media screen and (max-width: $laptop-S) {
+    padding-right: 0rem;
+  }
+  .imgWrapper {
+    width: 80%;
+    border-radius: 10px;
+    //Fixes bad position of next images
+    .image {
+      height: 100% !important;
+      position: unset !important;
+      object-fit: cover !important;
+    }
+    span {
+      padding: 0px !important;
+    }
+    //*//
+    @media screen and (max-width: $laptop-XS) {
+      width: 100%;
+    }
+  }
+  .projectInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      font-size: 1.8rem;
+    }
+    .description {
+      font-family: "Montserrat";
+      margin: 1rem 0;
+    }
+    .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+      gap: 0.7rem;
+      .technology {
+        font-family: "Montserrat";
+        padding: 0.3rem;
+        border: 3px solid $yellow-primary;
+        border-radius: 5px;
+      }
+    }
+    .linksWrapper {
+      display: flex;
+      gap: 0.5rem;
+      .website,
+      .github {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        width: 50%;
+      }
+      .website {
+        background-color: $yellow-primary;
+        color: rgb(50, 50, 50);
+        &:hover {
+          background-color: rgb(255, 191, 0);
+          color: black;
+        }
+      }
+      .github {
+        background-color: rgb(74, 74, 74);
+        color: rgb(214, 214, 214);
+        &:hover {
+          background-color: rgb(50, 50, 50);
+          color: white;
+        }
+      }
+    }
+  }
+}

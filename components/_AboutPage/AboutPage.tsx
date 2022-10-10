@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./AboutPage.module.scss";
-import leoImg from "../../assets/images/Vector.png";
+// import leoImg from "/images/Vector.png";
 const AboutPage = () => {
   return (
     <div className={styles.aboutWrapper} id="about">
@@ -29,7 +29,13 @@ const AboutPage = () => {
             </p>
           </div>
           <div className={styles.imageWrapper}>
-            <Image src={leoImg} />
+            <Image
+              src={"/images/Vector.png"}
+              height={"100%"}
+              width={"100%"}
+              layout={"responsive"}
+              objectFit={"contain"}
+            />
           </div>
         </div>
       </div>

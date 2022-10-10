@@ -1,10 +1,26 @@
 @import "../../styles/colors.module.scss";
-
-.projectsWrapper {
+@import "../../styles/breakpoints.module.scss";
+.projects {
   background: radial-gradient(
     49.95% 49.95% at 50% 50.05%,
     #fff8db 0%,
     #ffe993 100%
   );
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  .projectsInner {
+    width: 70vw;
+    @media screen and (max-width: $laptop-S) {
+      width: 85vw;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+    margin: 0 auto;
+
+    .projectsCardsContainer {
+    }
+  }
 }

@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
   const [matchesQuery, setMatchesQuery] = useState<boolean>(
     null as unknown as boolean
   );
-  const matches = useMediaQuery("(min-width: 1350px)");
+  const matches = useMediaQuery("(min-width: 1351px)");
   //Avoids hydration error
   useEffect(() => {
     setMatchesQuery(matches);

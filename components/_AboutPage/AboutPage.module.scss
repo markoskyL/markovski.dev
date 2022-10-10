@@ -1,17 +1,17 @@
 @import "../../styles/breakpoints.module.scss";
 .aboutWrapper {
-  padding: 7rem 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
   background: radial-gradient(
     40.91% 40.91% at 36.83% 59.09%,
     #fff8db 28.65%,
     #ffe993 100%
   );
   .aboutInner {
+    position: relative;
     width: 70vw;
     @media screen and (max-width: $tablet-XS) {
       width: 90vw;
@@ -49,18 +49,35 @@
         }
       }
       .imageWrapper {
-        max-width: 350px;
-        @media screen and (min-width: $phone-XS) and (max-width: $tablet-XS) {
+        width: 350px;
+        // height: 250px;
+        // width: 50%;
+        // overflow: hidden;
+        @media screen and (min-width: $tablet-XL) and (max-width: $laptop-S) {
+          width: 650px;
+        }
+        @media screen and (max-width: $tablet-XL) {
           position: absolute;
-          top: 100px;
-          right: 0px;
+        }
+        @media screen and (max-width: $tablet-XS) {
           max-width: 150px;
         }
+        @media screen and (max-width: $phone-XS) {
+          top: -25px;
+          right: 0px;
+        }
+        @media screen and (min-width: $phone-XS) and (max-width: $phone-L) {
+          top: 0px;
+          right: 0px;
+        }
+        @media screen and (min-width: $phone-L) and (max-width: $tablet-XS) {
+          top: 0px;
+          right: 70px;
+        }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-XL) {
-          position: absolute;
-          top: 100px;
-          right: 200px;
-          max-width: 150px;
+          top: -25px;
+          right: 100px;
+          max-width: 200px;
         }
       }
     }

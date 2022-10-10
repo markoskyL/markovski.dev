@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Brainster Labs",
+    "description": "Brainster Labs is a website where can be uploaded projects of the Brainster students from all the academies.",
+    "imgSrc": "/images/BrainsterLabs.png",
+    "websiteURL": "https://leonardo-markovski-brainsterwebsite.netlify.app",
+    "githubURL": "https://github.com/markoskyL/FE-Academy_Project01-BrainsterLabs",
+    "technologies": ["HTML", "CSS", "SCSS", "JavaScript"]
+  },
+  {
+    "id": "2",
+    "title": "StreetArtists",
+    "description": "To create web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
+    "imgSrc": "/images/StreetArtists.png",
+    "websiteURL": "https://streetartists-markosky.netlify.app",
+    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
+    "technologies": ["HTML", "SCSS", "JavaScript"]
+  }
+]
