@@ -6,7 +6,8 @@ const ProjectsPage = () => {
   return (
     <div className={styles.projects} id="projects">
       <div className={styles.projectsInner}>
-        <h1>projects.</h1>
+        <h1 className={styles.pageTitle}>projects.</h1>
+        <h2 className={styles.pagePretitle}>A selection of stuff i've built</h2>
         <div className={styles.projectsCardsContainer}>
           {data.map((project) => (
             <ProjectCard {...project} key={project.id} />

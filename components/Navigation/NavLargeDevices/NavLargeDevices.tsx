@@ -9,91 +9,60 @@ const NavLargeDevices = () => {
 
   return (
     <div className={styles.NavigationLargeDevices}>
-      <div className={styles.sideNavInner}>
-        <div className={styles.navLinkAndButtonWrapper}>
-          <div
-            className={`${styles.navStatusBtn} ${
-              pageVisible === "home" ? styles.active : ""
-            }`}
-          ></div>
-          <Link
-            to="home"
-            activeClass={styles.active}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            delay={100}
-            className={styles.navLink}
-            onSetActive={() => setPageVisible("home")}
-          >
-            Home
-          </Link>
-        </div>
+      <Link
+        to="home"
+        activeClass={styles.active}
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+        delay={100}
+        className={styles.navLink}
+        onSetActive={() => setPageVisible("home")}
+      >
+        Home
+      </Link>
+      <Link
+        to="about"
+        activeClass={styles.active}
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+        delay={100}
+        className={styles.navLink}
+        onSetActive={() => setPageVisible("about")}
+      >
+        About
+      </Link>
 
-        <div className={styles.navLinkAndButtonWrapper}>
-          <div
-            className={`${styles.navStatusBtn} ${
-              pageVisible === "about" ? styles.active : ""
-            }`}
-          ></div>
-          <Link
-            to="about"
-            activeClass={styles.active}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            delay={100}
-            className={styles.navLink}
-            onSetActive={() => setPageVisible("about")}
-          >
-            About
-          </Link>
-        </div>
+      <Link
+        to="projects"
+        activeClass={styles.active}
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+        delay={100}
+        className={styles.navLink}
+        onSetActive={() => setPageVisible("projects")}
+      >
+        Projects
+      </Link>
 
-        <div className={styles.navLinkAndButtonWrapper}>
-          <div
-            className={`${styles.navStatusBtn} ${
-              pageVisible === "projects" ? styles.active : ""
-            }`}
-          ></div>
-          <Link
-            to="projects"
-            activeClass={styles.active}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            delay={100}
-            className={styles.navLink}
-            onSetActive={() => setPageVisible("projects")}
-          >
-            Projects
-          </Link>
-        </div>
-
-        <div className={styles.navLinkAndButtonWrapper}>
-          <div
-            className={`${styles.navStatusBtn} ${
-              pageVisible === "contact" ? styles.active : ""
-            }`}
-          ></div>
-          <Link
-            to="contact"
-            activeClass={styles.active}
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            delay={100}
-            className={styles.navLink}
-            onSetActive={() => setPageVisible("contact")}
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
+      <Link
+        to="contact"
+        activeClass={styles.active}
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+        delay={100}
+        className={styles.navLink}
+        onSetActive={() => setPageVisible("contact")}
+      >
+        Contact
+      </Link>
     </div>
   );
 };

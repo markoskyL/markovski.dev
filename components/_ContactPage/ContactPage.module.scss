@@ -1,5 +1,9 @@
 @import "../../styles/colors.module.scss";
-.contactWrapper {
+.contact {
   min-height: 100vh;
   background-color: $yellow-light-primary;
+  .contactInner {
+    width: 70vw;
+    margin: 0 auto;
+  }
 }

@@ -2,8 +2,7 @@
 @import "../../../styles/breakpoints.module.scss";
 .cardWrapper {
   display: flex;
-  gap: 1rem;
-  margin-right: 4rem;
+  gap: 2rem;
   margin-bottom: 9rem;
   @media screen and (max-width: $laptop-XS) {
     flex-direction: column-reverse;
@@ -14,9 +13,9 @@
       flex-direction: row-reverse;
     }
   }
-  @media screen and (max-width: $laptop-S) {
-    margin-right: 0rem;
-  }
+  // @media screen and (max-width: $laptop-S) {
+  //   margin-right: 0rem;
+  // }
   .imgWrapper {
     width: 50vw;
     //Fixes explicit width & height error of next Image

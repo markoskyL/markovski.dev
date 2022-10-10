@@ -5,6 +5,7 @@ import styles from "./AboutPage.module.scss";
 const AboutPage = () => {
   return (
     <div className={styles.aboutWrapper} id="about">
+      <div className={styles.whiteTriangle}></div>
       <div className={styles.aboutInner}>
         <h1>about.</h1>
         <div className={styles.textAndImgWrapper}>
@@ -35,6 +36,7 @@ const AboutPage = () => {
               width={"100%"}
               layout={"responsive"}
               objectFit={"contain"}
+              alt="Leonardo Markovski Image"
             />
           </div>
         </div>

@@ -1,23 +1,34 @@
 @import "../../styles/breakpoints.module.scss";
+@import "../../styles/colors.module.scss";
 .aboutWrapper {
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(
-    40.91% 40.91% at 36.83% 59.09%,
-    #fff8db 28.65%,
-    #ffe993 100%
-  );
+  background-color: $yellow-primary;
+  .whiteTriangle {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    height: calc(100% + 4px);
+    width: 100%;
+    background-color: #fff8db;
+    z-index: 10;
+    -webkit-clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
+    clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
+  }
   .aboutInner {
+    z-index: 10;
     position: relative;
-    width: 70vw;
-    @media screen and (max-width: $tablet-XS) {
-      width: 90vw;
+    max-width: 50vw;
+    min-width: 800px;
+    @media screen and (max-width: $laptop-S) {
+      min-width: 75vw;
     }
-    @media screen and (min-width: $tablet-XS) and (max-width: $tablet-XL) {
-      width: 80vw;
+    @media screen and (max-width: $phone-M) {
+      min-width: 85vw;
     }
     h1 {
       font-size: 3rem;
@@ -39,7 +50,6 @@
         p {
           font-family: "Montserrat";
           font-size: 1.5rem;
-          // font-weight: 800;
           @media screen and (max-width: $tablet-XS) {
             font-size: 1.2rem;
           }
@@ -49,7 +59,7 @@
         }
       }
       .imageWrapper {
-        width: 350px;
+        width: 650px;
         @media screen and (min-width: $tablet-XL) and (max-width: $laptop-S) {
           width: 650px;
         }
