@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Brainster Labs",
-    "description": "Brainster Labs is a website where can be uploaded projects of the Brainster students from all the academies.",
+    "description": "Brainster Labs is a website where Brainster students from all academies can upload their projects.",
     "imgSrc": "/images/BrainsterLabs.png",
     "websiteURL": "https://leonardo-markovski-brainsterwebsite.netlify.app",
     "githubURL": "https://github.com/markoskyL/FE-Academy_Project01-BrainsterLabs",

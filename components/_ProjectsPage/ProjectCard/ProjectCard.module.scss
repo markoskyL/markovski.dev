@@ -3,7 +3,7 @@
 .cardWrapper {
   display: flex;
   gap: 1rem;
-  padding-right: 4rem;
+  margin-right: 4rem;
   margin-bottom: 9rem;
   @media screen and (max-width: $laptop-XS) {
     flex-direction: column-reverse;
@@ -15,19 +15,17 @@
     }
   }
   @media screen and (max-width: $laptop-S) {
-    padding-right: 0rem;
+    margin-right: 0rem;
   }
   .imgWrapper {
-    width: 80%;
-    border-radius: 10px;
-    //Fixes bad position of next images
-    .image {
-      height: 100% !important;
+    width: 50vw;
+    //Fixes explicit width & height error of next Image
+    > span {
       position: unset !important;
-      object-fit: cover !important;
     }
-    span {
-      padding: 0px !important;
+    .image {
+      position: relative !important;
+      height: unset !important;
     }
     //*//
     @media screen and (max-width: $laptop-XS) {
@@ -38,12 +36,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 50vw;
+    @media screen and (max-width: $laptop-XS) {
+      width: 100%;
+    }
     .title {
       font-size: 1.8rem;
     }
     .description {
       font-family: "Montserrat";
       margin: 1rem 0;
+      @media screen and (min-width: $desktop-XL) {
+        font-size: 1.2rem;
+      }
     }
     .technologies {
       display: flex;
@@ -73,17 +78,17 @@
       }
       .website {
         background-color: $yellow-primary;
-        color: rgb(50, 50, 50);
+        color: $gray-primary;
         &:hover {
-          background-color: rgb(255, 191, 0);
+          background-color: $yellow-primary-hover;
           color: black;
         }
       }
       .github {
-        background-color: rgb(74, 74, 74);
-        color: rgb(214, 214, 214);
+        background-color: $gray-secondary;
+        color: $gray-light;
         &:hover {
-          background-color: rgb(50, 50, 50);
+          background-color: $gray-primary;
           color: white;
         }
       }

@@ -39,7 +39,7 @@
         p {
           font-family: "Montserrat";
           font-size: 1.5rem;
-          font-weight: 900;
+          // font-weight: 800;
           @media screen and (max-width: $tablet-XS) {
             font-size: 1.2rem;
           }
@@ -50,9 +50,6 @@
       }
       .imageWrapper {
         width: 350px;
-        // height: 250px;
-        // width: 50%;
-        // overflow: hidden;
         @media screen and (min-width: $tablet-XL) and (max-width: $laptop-S) {
           width: 650px;
         }

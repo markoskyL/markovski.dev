@@ -14,7 +14,7 @@ const AboutPage = () => {
               Hi! I am <span className={styles.name}>Leonardo</span>
             </p>
             <p>
-              a Front-end developer based in Germany and a graduate of the
+              Front-end developer based in Germany and a graduate of the
               Brainster Front-end Academy.
             </p>
             <p>

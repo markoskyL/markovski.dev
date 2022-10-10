@@ -24,11 +24,10 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
       <div className={styles.imgWrapper}>
         <Image
           src={props.imgSrc}
-          width={"100vw"}
-          height={"100vw"}
+          layout={"fill"}
+          objectFit="cover"
+          alt={`${props.title} image`}
           className={styles.image}
-          layout={"responsive"}
-          objectFit={"contain"}
         />
       </div>
 
