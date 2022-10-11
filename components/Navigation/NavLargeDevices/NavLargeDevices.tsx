@@ -3,7 +3,6 @@ import styles from "./NavLargeDevices.module.scss";
 import { Link } from "react-scroll/modules";
 
 const NavLargeDevices = () => {
-  const Nav = useRef<HTMLDivElement>(null);
   const [currentScrollPosition, setCurrentScrollPosition] = useState<number>(
     window.pageYOffset
   );
@@ -24,9 +23,10 @@ const NavLargeDevices = () => {
   return (
     <div
       className={`${styles.NavigationLargeDevices} ${
-        !(newScrollPosition <= oldScrollPosition) && styles.scrollDown
+        newScrollPosition >= oldScrollPosition && newScrollPosition > 55
+          ? styles.scrollDown
+          : ""
       }`}
-      ref={Nav}
     >
       <Link
         to="home"

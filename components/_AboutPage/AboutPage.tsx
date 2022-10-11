@@ -31,6 +31,7 @@ const AboutPage = () => {
           </div>
           <div className={styles.imageWrapper}>
             <Image
+              priority
               src={"/images/Vector.png"}
               height={"100%"}
               width={"100%"}

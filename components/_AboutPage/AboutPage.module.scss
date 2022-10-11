@@ -47,7 +47,7 @@
         p {
           font-family: "Montserrat";
           font-size: 1.5rem;
-          @media screen and (max-width: $tablet-XS) {
+          @media screen and (max-width: $phone-L) {
             font-size: 1.2rem;
           }
           .name {
@@ -57,31 +57,25 @@
       }
       .imageWrapper {
         width: 650px;
-        @media screen and (min-width: $tablet-XL) and (max-width: $laptop-S) {
-          width: 650px;
-        }
+
         @media screen and (max-width: $tablet-XL) {
           position: absolute;
+          width: 200px;
+          top: -35px;
+          right: 0;
         }
-        @media screen and (max-width: $tablet-XS) {
-          max-width: 150px;
+        @media screen and (min-width: $phone-M) and (max-width: $tablet-XS) {
+          right: -50px;
+        }
+        @media screen and (max-width: $phone-L) {
+          top: 0;
+          width: 150px;
+        }
+        @media screen and (max-width: $phone-S) {
+          right: -20px;
         }
         @media screen and (max-width: $phone-XS) {
-          top: -25px;
-          right: 0px;
-        }
-        @media screen and (min-width: $phone-XS) and (max-width: $phone-L) {
-          top: 0px;
-          right: 0px;
-        }
-        @media screen and (min-width: $phone-L) and (max-width: $tablet-XS) {
-          top: 0px;
-          right: 70px;
-        }
-        @media screen and (min-width: $tablet-XS) and (max-width: $tablet-XL) {
-          top: -25px;
-          right: 100px;
-          max-width: 200px;
+          position: static;
         }
       }
     }
