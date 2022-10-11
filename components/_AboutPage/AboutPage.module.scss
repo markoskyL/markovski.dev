@@ -34,9 +34,6 @@
       font-size: 3rem;
       margin-bottom: 3.5rem;
       width: 100%;
-      @media screen and (max-width: $tablet-XS) {
-        font-size: 2.5rem;
-      }
     }
     .textAndImgWrapper {
       display: flex;

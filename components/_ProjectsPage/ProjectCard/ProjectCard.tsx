@@ -15,7 +15,6 @@ interface ProjectCardProps {
 }
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const reverse = Boolean(parseInt(props.id) % 2);
-  console.log(reverse);
   return (
     <div
       className={`${styles.cardWrapper} ${reverse ? styles.reverse : ""}`}
