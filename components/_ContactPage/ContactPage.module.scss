@@ -1,9 +1,51 @@
 @import "../../styles/colors.module.scss";
+@import "../../styles/breakpoints.module.scss";
 .contact {
-  min-height: 100vh;
-  background-color: $yellow-light-primary;
+  position: relative;
+  min-height: 50vh;
+  background-color: $yellow-primary;
+  padding: 200px 0;
   .contactInner {
-    width: 70vw;
+    max-width: 50vw;
+    min-width: 800px;
     margin: 0 auto;
+    @media screen and (max-width: $laptop-S) {
+      min-width: 75vw;
+    }
+    @media screen and (max-width: $phone-M) {
+      min-width: 85vw;
+    }
+    .name_emailWrapper {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      justify-content: space-between;
+      .label_inputWrapper {
+        width: 50%;
+      }
+    }
+    .label_inputWrapper {
+      display: flex;
+      flex-direction: column;
+      input {
+        background-color: $yellow-light;
+      }
+    }
+    .pageTitle {
+      font-size: 3rem;
+    }
+    .pagePreTitle {
+      color: $yellow-light;
+      margin-bottom: 3rem;
+    }
+  }
+  .whiteTriangle {
+    position: absolute;
+    top: -2px;
+    height: 300px;
+    width: 100%;
+    background-color: $yellow-light;
+    z-index: 10;
+    clip-path: polygon(100% 0, 0 0, 50% 30%);
   }
 }

@@ -13,7 +13,7 @@
     filter: drop-shadow(-8px 35px 10px rgba(0, 0, 0, 0.5));
     animation: floating infinite 2s ease-in-out;
     animation-delay: 2.5s;
-    @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+    @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
       width: 600px;
       height: 80px;
     }
@@ -63,7 +63,7 @@
           &.name.yellow {
             color: $yellow-primary;
           }
-          @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+          @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
             font-size: 4rem;
             -webkit-text-stroke-width: 2px;
           }
@@ -95,7 +95,7 @@
       #front,
       #back {
         width: 100px; //width = height
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           width: 80px;
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -128,7 +128,7 @@
         right: 700px; //width - ( height / 2 )
         background-color: #ffe26c;
         transform: rotateY(-90deg);
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           right: 560px;
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -149,7 +149,7 @@
         left: 700px; //width - height / 2
         background-color: var(--dark-yellow);
         transform: rotateY(90deg);
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           left: 560px;
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -169,7 +169,7 @@
       #left {
         background-color: var(--dark-yellow);
         transform: translateZ(-50px) rotateY(180deg); //tZ = height / 2
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           transform: translateZ(-40px) rotateY(180deg);
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -190,7 +190,7 @@
         //Last Name side
         background-color: black;
         transform: translateZ(50px); //tZ = height / 2
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           transform: translateZ(40px);
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -218,7 +218,7 @@
           $yellow-primary 100%
         );
         top: -50px; // height / -2
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           top: -40px;
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {
@@ -242,7 +242,7 @@
       #bottom {
         background-color: var(--dark-yellow);
         top: 50px; // height / 2
-        @media screen and (min-width: $tablet-L) and (max-width: $tablet-XL) {
+        @media screen and (min-width: $tablet-L) and (max-width: $laptop-XS) {
           top: 40px;
         }
         @media screen and (min-width: $tablet-XS) and (max-width: $tablet-L) {

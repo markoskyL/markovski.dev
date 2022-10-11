@@ -1,7 +1,8 @@
 @import "../../styles/colors.module.scss";
 @import "../../styles/breakpoints.module.scss";
 .projects {
-  background: #fff8db;
+  position: relative;
+  background: $yellow-light;
   min-height: 100vh;
   display: flex;
   justify-content: center;

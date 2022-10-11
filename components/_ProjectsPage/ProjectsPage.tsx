@@ -5,6 +5,7 @@ import data from "../../assets/projects.json";
 const ProjectsPage = () => {
   return (
     <div className={styles.projects} id="projects">
+
       <div className={styles.projectsInner}>
         <h1 className={styles.pageTitle}>projects.</h1>
         <h2 className={styles.pagePretitle}>
