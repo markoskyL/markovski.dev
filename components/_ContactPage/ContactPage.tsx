@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ContactPage.module.scss";
+
 const ContactPage = () => {
   return (
     <div className={styles.contact} id="contact">
@@ -12,20 +13,31 @@ const ContactPage = () => {
         <form action="">
           <div className={styles.name_emailWrapper}>
             <div className={styles.label_inputWrapper}>
-              <label htmlFor="">Your Name</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="name">Your Name</label>
+              <input type="text" name="name" id="name" required />
             </div>
             <div className={styles.label_inputWrapper}>
-              <label htmlFor="">Your Email</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="email">Your Email</label>
+              <input type="email" name="email" id="email" required />
             </div>
           </div>
           <div className={styles.label_inputWrapper}>
-            <label htmlFor="">Your Message</label>
-            <textarea name="" id="" cols={30} rows={10}></textarea>
+            <label className={styles.labelTArea} htmlFor="message">
+              Your Message
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              cols={30}
+              rows={10}
+              required
+            ></textarea>
           </div>
-          <button type="submit">Submit</button>
+          <button className={styles.submitBtn} type="submit">
+            Submit
+          </button>
         </form>
+
       </div>
     </div>
   );

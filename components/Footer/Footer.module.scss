@@ -1,0 +1,16 @@
+@import "../../styles/colors.module.scss";
+.Footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  color: $yellow-light;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  .contactIcons {
+    margin-left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+}

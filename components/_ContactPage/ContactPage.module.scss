@@ -2,10 +2,10 @@
 @import "../../styles/breakpoints.module.scss";
 .contact {
   position: relative;
-  min-height: 50vh;
   background-color: $yellow-primary;
   padding: 200px 0;
   .contactInner {
+    position: relative;
     max-width: 50vw;
     min-width: 800px;
     margin: 0 auto;
@@ -20,15 +20,55 @@
       gap: 1rem;
       width: 100%;
       justify-content: space-between;
+      @media screen and (max-width: $tablet-XS) {
+        flex-direction: column;
+        gap: 0rem;
+      }
       .label_inputWrapper {
         width: 50%;
+        @media screen and (max-width: $tablet-XS) {
+          width: 100%;
+        }
       }
     }
     .label_inputWrapper {
       display: flex;
       flex-direction: column;
-      input {
+      margin: 0.5rem 0;
+      position: relative;
+      label {
+        margin-bottom: 0.4rem;
+        cursor: pointer;
+      }
+      label::after {
+        content: "";
+        cursor: auto;
+        position: absolute;
+        top: 40px;
+        left: -5px;
+        display: block;
+        width: 100%;
         background-color: $yellow-light;
+      }
+      label:not(.labelTArea):after {
+        height: 33px;
+      }
+      label.labelTArea::after {
+        height: 196px;
+      }
+
+      input,
+      textarea {
+        background-color: $yellow-light;
+        padding: 0.5rem;
+        outline: none;
+        border: 2px solid black;
+        z-index: 10;
+        font-size: 1rem;
+        font-family: monospace, Arial, Helvetica, sans-serif;
+      }
+      textarea {
+        resize: none;
       }
     }
     .pageTitle {
@@ -38,14 +78,39 @@
       color: $yellow-light;
       margin-bottom: 3rem;
     }
+    .submitBtn {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 3rem;
+      padding: 0.5rem;
+      border: 2px solid black;
+      font-family: "Arial Black", Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: $yellow-light;
+      transition: background-color 0.5s ease-in-out;
+      @media screen and (max-width: $tablet-XS) {
+        width: 100%;
+      }
+      &:hover {
+        background-color: rgb(116, 201, 116);
+      }
+      &:active {
+        color: rgb(0, 82, 0);
+        border-top: 2px solid green;
+        border-left: 2px solid green;
+      }
+    }
   }
-  .whiteTriangle {
-    position: absolute;
-    top: -2px;
-    height: 300px;
-    width: 100%;
-    background-color: $yellow-light;
-    z-index: 10;
-    clip-path: polygon(100% 0, 0 0, 50% 30%);
-  }
+
+}
+.whiteTriangle {
+  position: absolute;
+  top: -2px;
+  height: 300px;
+  width: 100%;
+  background-color: $yellow-light;
+  z-index: 10;
+  clip-path: polygon(100% 0, 0 0, 50% 30%);
 }

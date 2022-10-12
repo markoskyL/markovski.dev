@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./NavLargeDevices.module.scss";
-import { Link } from "react-scroll/modules";
-
+import { Link as ScrollLink } from "react-scroll/modules";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import Link from "next/link";
 const NavLargeDevices = () => {
   const [currentScrollPosition, setCurrentScrollPosition] = useState<number>(
     window.pageYOffset
@@ -28,7 +30,7 @@ const NavLargeDevices = () => {
           : ""
       }`}
     >
-      <Link
+      <ScrollLink
         to="home"
         activeClass={styles.active}
         spy={true}
@@ -39,8 +41,8 @@ const NavLargeDevices = () => {
         className={styles.navLink}
       >
         Home
-      </Link>
-      <Link
+      </ScrollLink>
+      <ScrollLink
         to="about"
         activeClass={styles.active}
         spy={true}
@@ -51,9 +53,9 @@ const NavLargeDevices = () => {
         className={styles.navLink}
       >
         About
-      </Link>
+      </ScrollLink>
 
-      <Link
+      <ScrollLink
         to="projects"
         activeClass={styles.active}
         spy={true}
@@ -64,9 +66,9 @@ const NavLargeDevices = () => {
         className={styles.navLink}
       >
         Projects
-      </Link>
+      </ScrollLink>
 
-      <Link
+      <ScrollLink
         to="contact"
         activeClass={styles.active}
         spy={true}
@@ -77,7 +79,21 @@ const NavLargeDevices = () => {
         className={styles.navLink}
       >
         Contact
-      </Link>
+      </ScrollLink>
+      <div className={styles.contactIcons}>
+        <Link
+          href={"https://www.linkedin.com/in/leonardo-markovski-97293a162/"}
+        >
+          <a target={"_blank"}>
+            <BsLinkedin className={styles.linkedIn} />
+          </a>
+        </Link>
+        <Link href={"https://github.com/markoskyL/markovski.dev"}>
+          <a target={"_blank"}>
+            <BsGithub className={styles.gitHub} />
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };
