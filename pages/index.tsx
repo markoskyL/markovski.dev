@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <div className="pages-wrapper">
-        {/* <GeometricBackground /> */}
+        <GeometricBackground />
         <Navigation />
         <HomePage />
         <AboutPage />

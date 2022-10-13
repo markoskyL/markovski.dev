@@ -1,6 +1,24 @@
 [
   {
     "id": "1",
+    "title": "StreetArtists",
+    "description": "To create web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
+    "imgSrc": "/images/StreetArtists.png",
+    "websiteURL": "https://streetartists-markosky.netlify.app",
+    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
+    "technologies": ["HTML", "SCSS", "JavaScript"]
+  },
+  {
+    "id": "2",
+    "title": "Markovski Dev",
+    "description": "The work of art you're looking at right now.",
+    "imgSrc": "/images/MarkovskiDev.png",
+    "websiteURL": "#",
+    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
+    "technologies": ["NEXT JS", "SCSS"]
+  },
+  {
+    "id": "3",
     "title": "Brainster Labs",
     "description": "Brainster Labs is a website where Brainster students from all academies can upload their projects.",
     "imgSrc": "/images/BrainsterLabs.png",
@@ -9,12 +27,12 @@
     "technologies": ["HTML", "CSS", "SCSS", "JavaScript"]
   },
   {
-    "id": "2",
-    "title": "StreetArtists",
-    "description": "To create web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
-    "imgSrc": "/images/StreetArtists.png",
-    "websiteURL": "https://streetartists-markosky.netlify.app",
-    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
-    "technologies": ["HTML", "SCSS", "JavaScript"]
+    "id": "4",
+    "title": "CoinTracker ( coming soon...)",
+    "description": "CoinTracker is an application for tracking your monthly income as well as tracking your monthly expenses with the possibility of setting budget limits.",
+    "imgSrc": "/images/CoinTracker.png",
+    "websiteURL": "",
+    "githubURL": "",
+    "technologies": ["React", "SCSS"]
   }
 ]
