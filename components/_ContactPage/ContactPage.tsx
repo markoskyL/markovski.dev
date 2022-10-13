@@ -1,10 +1,13 @@
 import React, { FormEvent, useState } from "react";
 import styles from "./ContactPage.module.scss";
+import SuccessModal from "./SuccessModal/SuccessModal";
 
 const ContactPage = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [success, setSuccess] = useState<boolean>(false);
+
   interface dataProps {
     [key: string]: string;
     name: string;
@@ -25,13 +28,21 @@ const ContactPage = () => {
       .join("&");
   };
 
+  const handleSuccess = () => {
+    setSuccess(true);
+    document.body.classList.add("preventScroll");
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   const handleSubmit = (e: FormEvent) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...data }),
     })
-      .then(() => alert("Success!"))
+      .then(handleSuccess)
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -40,6 +51,9 @@ const ContactPage = () => {
   return (
     <div className={styles.contact} id="contact">
       <div className={styles.whiteTriangle}></div>
+      {success && (
+        <SuccessModal setSuccess={(value: boolean) => setSuccess(value)} />
+      )}
       <div className={styles.contactInner}>
         <h1 className={styles.pageTitle}>contact.</h1>
         <h2 className={styles.pagePreTitle}>

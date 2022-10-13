@@ -1,0 +1,24 @@
+@import "../../../styles/colors.module.scss";
+.successModal {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 200, 0, 0.943);
+  text-align: center;
+  padding: 2rem;
+  i {
+    font-size: 5rem;
+  }
+  span {
+    margin-top: 1rem;
+    cursor: pointer;
+    color: $linkedIn-blue;
+    border-bottom: 2px solid $linkedIn-blue;
+  }
+}

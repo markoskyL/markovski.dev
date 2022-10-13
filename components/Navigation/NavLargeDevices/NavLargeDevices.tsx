@@ -88,7 +88,7 @@ const NavLargeDevices = () => {
             <BsLinkedin className={styles.linkedIn} />
           </a>
         </Link>
-        <Link href={"https://github.com/markoskyL/markovski.dev"}>
+        <Link href={"https://github.com/markoskyL"}>
           <a target={"_blank"}>
             <BsGithub className={styles.gitHub} />
           </a>

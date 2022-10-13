@@ -7,7 +7,7 @@ import AboutPage from "../components/_AboutPage/AboutPage";
 import ContactPage from "../components/_ContactPage/ContactPage";
 import HomePage from "../components/_HomePage/HomePage";
 import ProjectsPage from "../components/_ProjectsPage/ProjectsPage";
-const Home: NextPage = () => {
+const MarkovskiDev: NextPage = () => {
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <div className="pages-wrapper">
-        <GeometricBackground />
+        {/* <GeometricBackground /> */}
         <Navigation />
         <HomePage />
         <AboutPage />
@@ -34,4 +34,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default MarkovskiDev;

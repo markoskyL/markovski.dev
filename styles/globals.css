@@ -21,6 +21,10 @@ h1 {
   /* text-align: center; */
 }
 
+.preventScroll {
+  overflow-y: hidden;
+}
+
 @font-face {
   font-family: "Arial Black";
   src: url("../assets/fonts/ariblk.ttf") format("truetype");
