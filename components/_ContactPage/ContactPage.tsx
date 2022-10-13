@@ -1,11 +1,42 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "./ContactPage.module.scss";
 
 const ContactPage = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const handleSubmit = () => {};
+  interface dataProps {
+    [key: string]: string;
+    name: string;
+    email: string;
+    message: string;
+  }
+
+  const data: dataProps = {
+    name: name,
+    email: email,
+    message: message,
+  };
+  const encode = (data: dataProps) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
+
   return (
     <div className={styles.contact} id="contact">
       <div className={styles.whiteTriangle}></div>
@@ -14,7 +45,12 @@ const ContactPage = () => {
         <h2 className={styles.pagePreTitle}>
           Have a question or want to work together ?
         </h2>
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <div className={styles.name_emailWrapper}>
             <div className={styles.label_inputWrapper}>
