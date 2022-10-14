@@ -44,13 +44,13 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         </div>
         <div className={styles.linksWrapper}>
           <Link href={props.websiteURL}>
-            <a className={styles.website}>
+            <a className={styles.website} target="_blank">
               Website
               <BiGlobe size={"1.3rem"} />
             </a>
           </Link>
           <Link href={props.githubURL}>
-            <a className={styles.github}>
+            <a className={styles.github} target="_blank">
               Github <FaGithub size={"1.3rem"} />
             </a>
           </Link>

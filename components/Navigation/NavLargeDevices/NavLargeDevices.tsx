@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NavLargeDevices.module.scss";
 import { Link as ScrollLink } from "react-scroll/modules";
 import { BsLinkedin } from "react-icons/bs";

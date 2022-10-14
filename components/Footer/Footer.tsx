@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             <BsLinkedin />
           </a>
         </Link>
-        <Link href={"https://github.com/markoskyL/markovski.dev"}>
+        <Link href={"https://github.com/markoskyL"}>
           <a target={"_blank"}>
             <BsGithub />
           </a>

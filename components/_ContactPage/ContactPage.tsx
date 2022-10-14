@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { FormEvent, useState } from "react";
 import styles from "./ContactPage.module.scss";
 import SuccessModal from "./SuccessModal/SuccessModal";
@@ -8,26 +9,6 @@ const ContactPage = () => {
   const [message, setMessage] = useState<string>("");
   const [success, setSuccess] = useState<boolean>(false);
 
-  interface dataProps {
-    [key: string]: string;
-    name: string;
-    email: string;
-    message: string;
-  }
-
-  const data: dataProps = {
-    name: name,
-    email: email,
-    message: message,
-  };
-  const encode = (data: dataProps) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
   const handleSuccess = () => {
     setSuccess(true);
     document.body.classList.add("preventScroll");
@@ -37,13 +18,17 @@ const ContactPage = () => {
   };
 
   const handleSubmit = (e: FormEvent) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
-    })
+    axios.defaults.headers.post["Content-Type"] = "application/json";
+    axios
+      .post("https://formsubmit.co/ajax/markovski.dev@gmail.com", {
+        name: name,
+        email: email,
+        message: message,
+      })
       .then(handleSuccess)
-      .catch((error) => alert(error));
+      .catch(() =>
+        alert("There was a problem sending your message please try again later")
+      );
 
     e.preventDefault();
   };
@@ -62,11 +47,13 @@ const ContactPage = () => {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          action="https://formsubmit.co/markovski.dev@gmail.com"
           onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="_contact" value="New submission!" />
+          <input type="hidden" name="_template" value="table"></input>
+          <input type="hidden" name="_captcha" value="false"></input>
+          <input type="text" name="_honey" style={{ display: "none" }}></input>
           <div className={styles.name_emailWrapper}>
             <div className={styles.label_inputWrapper}>
               <label htmlFor="name">Your Name</label>
