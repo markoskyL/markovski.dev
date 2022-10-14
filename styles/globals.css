@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arial Black", "Arial CE MT Black", Helvetica "Arial Bold",
-    Gadget, sans-serif;
+  font-family: "Arial Black", "Arial CE MT Black", Helvetica, sans-serif;
 }
 
 a {
