@@ -101,9 +101,18 @@
         border-top: 2px solid green;
         border-left: 2px solid green;
       }
+      &:disabled {
+        color: black;
+        cursor: auto;
+      }
+      &:disabled:hover {
+        background-color: $yellow-light;
+      }
+      &:disabled:active {
+        border: 2px solid black;
+      }
     }
   }
-
 }
 .whiteTriangle {
   position: absolute;

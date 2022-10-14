@@ -15,10 +15,14 @@
   i {
     font-size: 5rem;
   }
-  span {
+  .homeLink {
     margin-top: 1rem;
     cursor: pointer;
     color: $linkedIn-blue;
     border-bottom: 2px solid $linkedIn-blue;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $linkedIn-blue-hover;
+    }
   }
 }

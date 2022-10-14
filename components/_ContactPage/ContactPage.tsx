@@ -8,6 +8,7 @@ const ContactPage = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [success, setSuccess] = useState<boolean>(false);
+  const [sending, setSending] = useState<boolean>(false);
 
   const handleSuccess = () => {
     setSuccess(true);
@@ -18,6 +19,7 @@ const ContactPage = () => {
   };
 
   const handleSubmit = (e: FormEvent) => {
+    setSending(true);
     axios.defaults.headers.post["Content-Type"] = "application/json";
     axios
       .post("https://formsubmit.co/ajax/markovski.dev@gmail.com", {
@@ -25,10 +27,17 @@ const ContactPage = () => {
         email: email,
         message: message,
       })
-      .then(handleSuccess)
-      .catch(() =>
-        alert("There was a problem sending your message please try again later")
-      );
+      .then(() => {
+        handleSuccess();
+        setSending(false);
+      })
+
+      .catch(() => {
+        alert(
+          "There was a problem sending your message please try again later"
+        );
+        setSending(false);
+      });
 
     e.preventDefault();
   };
@@ -47,7 +56,7 @@ const ContactPage = () => {
         <form
           name="contact"
           method="POST"
-          action="https://formsubmit.co/markovski.dev@gmail.com"
+          action="https://formsubmit.co/53bd66fed9f637fc3c585b451100113e"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="_contact" value="New submission!" />
@@ -92,8 +101,8 @@ const ContactPage = () => {
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
-          <button className={styles.submitBtn} type="submit">
-            Submit
+          <button className={styles.submitBtn} type="submit" disabled={sending}>
+            {!sending ? "Submit" : "Sending..."}
           </button>
         </form>
       </div>
