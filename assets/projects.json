@@ -14,7 +14,7 @@
     "description": "The work of art you're looking at right now.",
     "imgSrc": "/images/MarkovskiDev.png",
     "websiteURL": "#",
-    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
+    "githubURL": "https://github.com/markoskyL/markovski.dev",
     "technologies": ["NEXT JS", "SCSS"]
   },
   {
@@ -33,6 +33,7 @@
     "imgSrc": "/images/CoinTracker.png",
     "websiteURL": "",
     "githubURL": "",
-    "technologies": ["React", "SCSS"]
+    "technologies": ["React", "SCSS"],
+    "disabled": true
   }
 ]

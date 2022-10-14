@@ -1,3 +1,4 @@
+@import "../../../styles/colors.module.scss";
 .NavigationSmallDevices {
   position: fixed;
   width: 100%;
@@ -5,34 +6,59 @@
   z-index: 100;
   .navigation {
     position: absolute;
-    top: -100vh;
     width: 100%;
     height: 100vh;
-    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     &.clicked {
-      top: 0;
+      opacity: 1;
+      pointer-events: all;
+      .navLink {
+        height: 75px;
+        opacity: 1;
+      }
+      .contactIcons {
+        bottom: 0px;
+      }
     }
     .navLink {
+      height: 0px;
+      opacity: 0;
+      overflow: hidden;
       font-size: 3rem;
       transition: all 0.15s ease-in-out;
-      color: #787648;
+      color: $gray-secondary;
       z-index: 10;
       &.active {
-        transform: skew(0deg, 0deg) scale(1.1);
-        color: black;
+        transform: scale(1.1);
+        color: $black;
       }
+    }
+    .contactIcons {
+      background-color: $gray-primary;
+      width: 100%;
+      position: absolute;
+      padding: 0.7rem;
+      bottom: -65px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      color: $white;
+      transition: bottom 0.5s ease;
     }
     .navBg {
       position: absolute;
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(251, 180, 0, 0.902);
+      background-color: $yellow-primary-09;
       backdrop-filter: blur(6px);
     }
   }

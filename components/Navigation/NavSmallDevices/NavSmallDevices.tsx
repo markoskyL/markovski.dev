@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HamburgerBtn from "../Navbar/HamburgerBtn";
 import styles from "./NavSmallDevices.module.scss";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 const NavSmallDevices = () => {
   const [isMenuClicked, setIsMenuClicked] = useState<boolean>(false);
   const handleClick = () => {
     setIsMenuClicked((prev) => !prev);
   };
+  useEffect(() => {
+    isMenuClicked
+      ? document.body.classList.add("preventScroll")
+      : document.body.classList.remove("preventScroll");
+  }, [isMenuClicked]);
+
   return (
     <div className={styles.NavigationSmallDevices}>
       <HamburgerBtn isMenuClicked={isMenuClicked} handleClick={handleClick} />
@@ -16,58 +25,73 @@ const NavSmallDevices = () => {
         }`}
       >
         <div className={styles.navBg}></div>
-        <Link
+        <ScrollLink
           to="home"
           activeClass={styles.active}
           spy={true}
           smooth={true}
-          offset={-200}
-          duration={500}
-          delay={100}
+          duration={200}
+          offset={0}
           className={styles.navLink}
           onClick={handleClick}
         >
           Home
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="about"
           activeClass={styles.active}
           spy={true}
           smooth={true}
-          offset={-200}
-          duration={500}
-          delay={100}
+          duration={200}
+          offset={0}
           className={styles.navLink}
           onClick={handleClick}
         >
           About
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="projects"
           activeClass={styles.active}
           spy={true}
           smooth={true}
-          offset={-200}
-          duration={500}
-          delay={100}
+          duration={200}
+          offset={0}
           className={styles.navLink}
           onClick={handleClick}
         >
           Projects
-        </Link>
-        <Link
+        </ScrollLink>
+        <ScrollLink
           to="contact"
           activeClass={styles.active}
           spy={true}
           smooth={true}
-          offset={-200}
-          duration={500}
-          delay={100}
+          duration={200}
+          offset={0}
           className={styles.navLink}
           onClick={handleClick}
         >
           Contact
-        </Link>
+        </ScrollLink>
+        <div className={styles.contactIcons}>
+          <Link
+            href={"https://www.linkedin.com/in/leonardo-markovski-97293a162/"}
+          >
+            <a target={"_blank"}>
+              <BsLinkedin className={styles.linkedIn} size={"2rem"} />
+            </a>
+          </Link>
+          <Link href={"https://github.com/markoskyL"}>
+            <a target={"_blank"}>
+              <BsGithub className={styles.gitHub} size={"2rem"} />
+            </a>
+          </Link>
+          <Link href={"mailto: markovski.dev@gmail.com"}>
+            <a>
+              <MdEmail size={"2rem"} />
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );

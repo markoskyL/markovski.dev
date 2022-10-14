@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import styles from "./Footer.module.scss";
 
 const Footer: React.FC = () => {
@@ -18,6 +19,11 @@ const Footer: React.FC = () => {
         <Link href={"https://github.com/markoskyL"}>
           <a target={"_blank"}>
             <BsGithub />
+          </a>
+        </Link>
+        <Link href={"mailto: markovski.dev@gmail.com"}>
+          <a>
+            <MdEmail />
           </a>
         </Link>
       </div>

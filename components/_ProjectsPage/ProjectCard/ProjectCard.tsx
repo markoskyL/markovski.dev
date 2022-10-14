@@ -12,12 +12,15 @@ interface ProjectCardProps {
   websiteURL: string;
   githubURL: string;
   technologies: string[];
+  disabled?: boolean;
 }
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const reverse = Boolean(parseInt(props.id) % 2);
   return (
     <div
-      className={`${styles.cardWrapper} ${reverse ? styles.reverse : ""}`}
+      className={`${styles.cardWrapper} ${reverse ? styles.reverse : ""} ${
+        props.disabled === true ? styles.disabled : ""
+      }`}
       id={props.id}
     >
       <div className={styles.imgWrapper}>
@@ -36,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           <p className={styles.description}>{props.description}</p>
           <div className={styles.technologies}>
             {props.technologies.map((tech) => (
-              <span className={styles.technology} key={tech + "1"}>
+              <span className={styles.technology} key={tech}>
                 {tech}
               </span>
             ))}

@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, filter 0.3s ease;
   &.scrollDown {
     transform: translateY(-55px);
   }
@@ -30,9 +30,9 @@
     top: 50%;
     transform: translate(0, -40%);
     .linkedIn,
-    .gitHub {
+    .gitHub,
+    .email {
       cursor: pointer;
-      font-size: 1.3rem;
       margin: 0 0.5rem;
       transition: all 0.2s ease-in-out;
       color: $gray-secondary;
@@ -42,7 +42,14 @@
       color: $linkedIn-blue;
     }
     .gitHub:hover {
-      color: black;
+      color: $black;
+    }
+    .email:hover {
+      color: $danger-primary;
     }
   }
+}
+.navShadow {
+  // transition: filter 0.3s ease;
+  filter: drop-shadow(5px 10px 20px rgba(0, 0, 0, 0.34));
 }
