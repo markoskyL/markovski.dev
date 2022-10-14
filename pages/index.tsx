@@ -14,7 +14,6 @@ const MarkovskiDev: NextPage = () => {
       <Head>
         <title>markovski.dev</title>
         <link rel="icon" href="/favicon.ico" />
-        <link href="http://fonts.cdnfonts.com/css/arial" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
