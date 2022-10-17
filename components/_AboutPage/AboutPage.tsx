@@ -30,15 +30,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className={styles.imageWrapper}>
-            <Image
-              priority
-              src={"/images/Vector.png"}
-              height={"100%"}
-              width={"100%"}
-              layout={"responsive"}
-              objectFit={"contain"}
-              alt="Leonardo Markovski Image"
-            />
+            <img src={"/images/Vector.png"} alt="Leonardo Markovski Image" />
           </div>
         </div>
       </div>

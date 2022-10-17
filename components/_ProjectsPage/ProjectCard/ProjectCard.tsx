@@ -24,13 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
       id={props.id}
     >
       <div className={styles.imgWrapper}>
-        <Image
-          src={props.imgSrc}
-          layout={"fill"}
-          objectFit="cover"
-          alt={`${props.title} image`}
-          className={styles.image}
-        />
+        <img src={props.imgSrc} alt={`${props.title} image`} />
       </div>
 
       <div className={styles.projectInfo}>
