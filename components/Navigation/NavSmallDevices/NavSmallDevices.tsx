@@ -75,13 +75,13 @@ const NavSmallDevices = () => {
         </ScrollLink>
         <div className={styles.contactIcons}>
           <Link
-            href={"https://www.linkedin.com/in/leonardo-markovski-97293a162/"}
+            href={"https://www.linkedin.com/in/markovskiL/"}
           >
             <a target={"_blank"}>
               <BsLinkedin className={styles.linkedIn} size={"2rem"} />
             </a>
           </Link>
-          <Link href={"https://github.com/markoskyL"}>
+          <Link href={"https://github.com/markovskiL"}>
             <a target={"_blank"}>
               <BsGithub className={styles.gitHub} size={"2rem"} />
             </a>
