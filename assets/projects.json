@@ -6,8 +6,9 @@
     "imgSrc": "/images/CoinTracker.png",
     "websiteURL": "https://cointracker-e6b9e.web.app/overview",
     "githubURL": "https://github.com/markovskiL/CoinTracker",
-    "technologies": ["React", "Material-UI", "CSS", "Firebase"],
+    "technologies": ["React", "Material-UI", "CSS", "Firebase"]
   },
+
   {
     "id": "2",
     "title": "StreetArtists",
@@ -17,6 +18,7 @@
     "githubURL": "https://github.com/markovskiL/StreetARTists",
     "technologies": ["HTML", "SCSS", "JavaScript"]
   },
+
   {
     "id": "3",
     "title": "Markovski Dev",
@@ -26,6 +28,7 @@
     "githubURL": "https://github.com/markoskyL/markovski.dev",
     "technologies": ["NEXT JS", "SCSS"]
   },
+
   {
     "id": "4",
     "title": "Brainster Labs",
@@ -35,4 +38,5 @@
     "githubURL": "https://github.com/markovskiL/Brainster-Labs",
     "technologies": ["HTML", "CSS", "SCSS", "JavaScript"]
   }
+
 ]

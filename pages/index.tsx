@@ -12,7 +12,7 @@ const MarkovskiDev: NextPage = () => {
   return (
     <>
       <Head>
-        <title>markovski.dev</title>
+        <title>Markovski</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
