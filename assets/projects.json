@@ -1,15 +1,24 @@
 [
   {
     "id": "1",
+    "title": "CoinTracker",
+    "description": "CoinTracker is an application for tracking your monthly income as well as tracking your monthly expenses with the possibility of setting budget limits.",
+    "imgSrc": "/images/CoinTracker.png",
+    "websiteURL": "https://cointracker-e6b9e.web.app/overview",
+    "githubURL": "https://github.com/markovskiL/CoinTracker",
+    "technologies": ["React", "Material-UI", "CSS", "Firebase"],
+  },
+  {
+    "id": "2",
     "title": "StreetArtists",
     "description": "To create web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
     "imgSrc": "/images/StreetArtists.png",
     "websiteURL": "https://streetartists-markosky.netlify.app",
-    "githubURL": "https://github.com/markoskyL/FE-Academy_Project02-Streetartists",
+    "githubURL": "https://github.com/markovskiL/StreetARTists",
     "technologies": ["HTML", "SCSS", "JavaScript"]
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "Markovski Dev",
     "description": "Portfolio website - representation of work i have created, as well as my skills and experiences..",
     "imgSrc": "/images/MarkovskiDev.png",
@@ -18,22 +27,12 @@
     "technologies": ["NEXT JS", "SCSS"]
   },
   {
-    "id": "3",
+    "id": "4",
     "title": "Brainster Labs",
     "description": "Brainster Labs is a website where Brainster students from all academies can upload their projects.",
     "imgSrc": "/images/BrainsterLabs.png",
     "websiteURL": "https://leonardo-markovski-brainsterwebsite.netlify.app",
-    "githubURL": "https://github.com/markoskyL/FE-Academy_Project01-BrainsterLabs",
+    "githubURL": "https://github.com/markovskiL/Brainster-Labs",
     "technologies": ["HTML", "CSS", "SCSS", "JavaScript"]
-  },
-  {
-    "id": "4",
-    "title": "CoinTracker ( coming soon...)",
-    "description": "CoinTracker is an application for tracking your monthly income as well as tracking your monthly expenses with the possibility of setting budget limits.",
-    "imgSrc": "/images/CoinTracker.png",
-    "websiteURL": "",
-    "githubURL": "",
-    "technologies": ["React", "SCSS"],
-    "disabled": true
   }
 ]
