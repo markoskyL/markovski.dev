@@ -74,9 +74,7 @@ const NavSmallDevices = () => {
           Contact
         </ScrollLink>
         <div className={styles.contactIcons}>
-          <Link
-            href={"https://www.linkedin.com/in/markovskiL/"}
-          >
+          <Link href={"https://www.linkedin.com/in/markovskiL/"}>
             <a target={"_blank"}>
               <BsLinkedin className={styles.linkedIn} size={"2rem"} />
             </a>

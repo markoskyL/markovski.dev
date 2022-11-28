@@ -3,7 +3,21 @@
     "id": "1",
     "title": "CoinTracker",
     "description": "CoinTracker is an application for tracking your monthly income as well as tracking your monthly expenses with the possibility of setting budget limits.",
-    "imgSrc": "/images/CoinTracker.png",
+    "imgSrc": [
+      "/images/cointracker/cointracker_macbook_1.png",
+      "/images/cointracker/cointracker_macbook_2.png",
+      "/images/cointracker/cointracker_macbook_3.png",
+      "/images/cointracker/cointracker_macbook_4.png",
+      "/images/cointracker/cointracker_macbook_5.png",
+      "/images/cointracker/cointracker_macbook_6.png",
+      "/images/cointracker/cointracker_macbook_7.png",
+      "/images/cointracker/cointracker_phone_1.png",
+      "/images/cointracker/cointracker_phone_2.png",
+      "/images/cointracker/cointracker_phone_3.png",
+      "/images/cointracker/cointracker_phone_4.png",
+      "/images/cointracker/cointracker_phone_5.png",
+      "/images/cointracker/cointracker_phone_6.png"
+    ],
     "websiteURL": "https://cointracker-e6b9e.web.app/overview",
     "githubURL": "https://github.com/markovskiL/CoinTracker",
     "technologies": ["React", "Material-UI", "CSS", "Firebase"]
@@ -13,7 +27,21 @@
     "id": "2",
     "title": "StreetArtists",
     "description": "To create web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
-    "imgSrc": "/images/StreetArtists.png",
+    "imgSrc": [
+      "/images/streetartists/streetartists_macbook_1.png",
+      "/images/streetartists/streetartists_macbook_2.png",
+      "/images/streetartists/streetartists_macbook_3.png",
+      "/images/streetartists/streetartists_macbook_4.png",
+      "/images/streetartists/streetartists_macbook_5.png",
+      "/images/streetartists/streetartists_macbook_6.png",
+      "/images/streetartists/streetartists_macbook_7.png",
+      "/images/streetartists/streetartists_phone_1.png",
+      "/images/streetartists/streetartists_phone_2.png",
+      "/images/streetartists/streetartists_phone_3.png",
+      "/images/streetartists/streetartists_phone_4.png",
+      "/images/streetartists/streetartists_phone_5.png",
+      "/images/streetartists/streetartists_phone_6.png"
+    ],
     "websiteURL": "https://streetartists-markosky.netlify.app",
     "githubURL": "https://github.com/markovskiL/StreetARTists",
     "technologies": ["HTML", "SCSS", "JavaScript"]
@@ -23,7 +51,7 @@
     "id": "3",
     "title": "Markovski Dev",
     "description": "Portfolio website - representation of work i have created, as well as my skills and experiences..",
-    "imgSrc": "/images/MarkovskiDev.png",
+    "imgSrc": ["/images/markovskidev/markovskidev_macbook_1.png"],
     "websiteURL": "#",
     "githubURL": "https://github.com/markoskyL/markovski.dev",
     "technologies": ["NEXT JS", "SCSS"]
@@ -33,10 +61,18 @@
     "id": "4",
     "title": "Brainster Labs",
     "description": "Brainster Labs is a website where Brainster students from all academies can upload their projects.",
-    "imgSrc": "/images/BrainsterLabs.png",
+    "imgSrc": [
+      "/images/brainsterlabs/brainsterlabs_macbook_1.png",
+      "/images/brainsterlabs/brainsterlabs_macbook_2.png",
+      "/images/brainsterlabs/brainsterlabs_macbook_3.png",
+      "/images/brainsterlabs/brainsterlabs_macbook_4.png",
+      "/images/brainsterlabs/brainsterlabs_phone_1.png",
+      "/images/brainsterlabs/brainsterlabs_phone_2.png",
+      "/images/brainsterlabs/brainsterlabs_phone_3.png",
+      "/images/brainsterlabs/brainsterlabs_phone_4.png"
+    ],
     "websiteURL": "https://leonardo-markovski-brainsterwebsite.netlify.app",
     "githubURL": "https://github.com/markovskiL/Brainster-Labs",
     "technologies": ["HTML", "CSS", "SCSS", "JavaScript"]
   }
-
 ]

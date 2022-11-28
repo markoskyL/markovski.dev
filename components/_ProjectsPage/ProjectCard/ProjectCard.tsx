@@ -1,30 +1,49 @@
-import React from "react";
-import Image from "next/image";
-import styles from "./ProjectCard.module.scss";
-import { BiGlobe } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
-interface ProjectCardProps {
+import React, { useEffect, useState } from 'react';
+import styles from './ProjectCard.module.scss';
+import { BiGlobe } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
+import Link from 'next/link';
+import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
+import LightBox from '../../LightBox/LightBox';
+export interface ProjectCardProps {
   id: string;
   title: string;
   description: string;
-  imgSrc: string;
+  imgSrc: imageDataProps[];
   websiteURL: string;
   githubURL: string;
   technologies: string[];
   disabled?: boolean;
 }
+
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const reverse = Boolean(parseInt(props.id) % 2);
+  const [lightBox, setLightBox] = useState<boolean>(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const handleClick = () => {
+    setLightBox((prev) => !prev);
+  };
+
+  useEffect(() => {
+    lightBox
+      ? document.body.classList.add('preventScroll')
+      : document.body.classList.remove('preventScroll');
+  }, [lightBox]);
+
   return (
     <div
-      className={`${styles.cardWrapper} ${reverse ? styles.reverse : ""} ${
-        props.disabled === true ? styles.disabled : ""
+      className={`${styles.cardWrapper} ${reverse ? styles.reverse : ''} ${
+        props.disabled === true ? styles.disabled : ''
       }`}
       id={props.id}
     >
       <div className={styles.imgWrapper}>
-        <img src={props.imgSrc} alt={`${props.title} image`} />
+        <SplideSlider
+          imagesData={props.imgSrc}
+          handleClick={handleClick}
+          setCurrentIndex={setCurrentIndex}
+        />
       </div>
 
       <div className={styles.projectInfo}>
@@ -43,16 +62,23 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           <Link href={props.websiteURL}>
             <a className={styles.website} target="_blank">
               Website
-              <BiGlobe size={"1.3rem"} />
+              <BiGlobe size={'1.3rem'} />
             </a>
           </Link>
           <Link href={props.githubURL}>
             <a className={styles.github} target="_blank">
-              Github <FaGithub size={"1.3rem"} />
+              Github <FaGithub size={'1.3rem'} />
             </a>
           </Link>
         </div>
       </div>
+      {lightBox && (
+        <LightBox
+          images={props.imgSrc}
+          onClose={handleClick}
+          currentIndex={currentIndex}
+        />
+      )}
     </div>
   );
 };

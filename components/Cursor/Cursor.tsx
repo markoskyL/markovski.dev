@@ -13,7 +13,7 @@ const Cursor = () => {
     outerCursor.current.style.left = `${x}px`;
     outerCursor.current.style.top = `${y}px`;
   };
-  
+
   useEffect(() => {
     const links = Array.from(document.querySelectorAll("a"));
 

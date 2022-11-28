@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arial Black", "Arial CE MT Black", Helvetica, sans-serif;
+  font-family: 'Arial Black', 'Arial CE MT Black', Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -27,8 +27,17 @@ h1 {
 }
 
 @font-face {
-  font-family: "Arial Black";
-  src: url("../assets/fonts/ArialCEMTBlack.woff") format("woff");
+  font-family: 'Arial Black';
+  src: url('../assets/fonts/ArialCEMTBlack.woff') format('woff');
   font-weight: 900;
   font-style: normal;
+}
+
+.splide__slide {
+  opacity: 0.6;
+}
+
+.splide__slide.is-active {
+  border: none !important;
+  opacity: 1;
 }

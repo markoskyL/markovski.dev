@@ -1,5 +1,5 @@
-@import "../../styles/breakpoints.module.scss";
-@import "../../styles/colors.module.scss";
+@import '../../styles/breakpoints.module.scss';
+@import '../../styles/colors.module.scss';
 .aboutWrapper {
   position: relative;
   min-height: 100vh;
@@ -8,16 +8,21 @@
   align-items: center;
   flex-direction: column;
   background-color: $yellow-primary;
-  .whiteTriangle {
+  .whiteTriangleWrap {
     position: absolute;
     top: -2px;
     right: 0;
     height: calc(100% + 4px);
     width: 100%;
-    background-color: $yellow-light;
-    z-index: 10;
-    -webkit-clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
-    clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
+    filter: drop-shadow(-47px 22px 10px rgba(0, 0, 0, 0.18));
+    .whiteTriangle {
+      height: 100%;
+      width: 100%;
+      background-color: $yellow-light;
+      z-index: 10;
+      -webkit-clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
+      clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
+    }
   }
   .aboutInner {
     z-index: 10;
@@ -54,13 +59,13 @@
           padding-bottom: 2rem;
         }
         p {
-          font-family: "Montserrat";
+          font-family: 'Montserrat';
           font-size: 1.5rem;
           @media screen and (max-width: $phone-L) {
             font-size: 1.2rem;
           }
           .name {
-            font-family: "Arial Black";
+            font-family: 'Arial Black';
           }
         }
       }

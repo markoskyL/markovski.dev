@@ -46,4 +46,3 @@ const SquarePrismName = () => {
 };
 
 export default SquarePrismName;
-
