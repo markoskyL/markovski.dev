@@ -17,7 +17,7 @@ const MarkovskiDev: NextPage<props> = ({ imagesData }) => {
   return (
     <>
       <Head>
-        <title>Markovski DEV</title>
+        <title>Markovski Dev</title>
         <meta
           name="description"
           content="Leonardo Markovski is Front-End Developer focused on creating web applications using best practices."
