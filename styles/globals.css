@@ -5,6 +5,14 @@ body {
   font-family: 'Arial Black', 'Arial CE MT Black', Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  -webkit-appearance: none;
+}
+.preventScroll {
+  overflow-y: hidden;
+}
 
 a {
   color: inherit;
@@ -22,10 +30,6 @@ h1 {
   /* text-align: center; */
 }
 
-.preventScroll {
-  overflow-y: hidden;
-}
-
 @font-face {
   font-family: 'Arial Black';
   src: url('../assets/fonts/ArialCEMTBlack.woff') format('woff');
@@ -40,4 +44,9 @@ h1 {
 .splide__slide.is-active {
   border: none !important;
   opacity: 1;
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
 }

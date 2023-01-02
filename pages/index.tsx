@@ -1,15 +1,15 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Footer from '../components/Footer/Footer';
-import Navigation from '../components/Navigation/Navigation';
 import AboutPage from '../components/_AboutPage/AboutPage';
 import ContactPage from '../components/_ContactPage/ContactPage';
+import Footer from '../components/Footer/Footer';
+import GeometricBackground from '../components/GeometricBackground/GeometricBackground';
+import Head from 'next/head';
 import HomePage from '../components/_HomePage/HomePage';
+import Navigation from '../components/Navigation/Navigation';
+import type { NextPage } from 'next';
+import { ProjectCardProps } from '../components/_ProjectsPage/ProjectCard/ProjectCard';
 import ProjectsPage from '../components/_ProjectsPage/ProjectsPage';
 import data from '../assets/projects.json';
 import { getPlaiceholder } from 'plaiceholder';
-import { ProjectCardProps } from '../components/_ProjectsPage/ProjectCard/ProjectCard';
-import GeometricBackground from '../components/GeometricBackground/GeometricBackground';
 interface props {
   imagesData: ProjectCardProps[];
 }
@@ -31,8 +31,8 @@ const MarkovskiDev: NextPage<props> = ({ imagesData }) => {
           crossOrigin="true"
         />
       </Head>
-      <div className="pages-wrapper">
-        {/* <GeometricBackground /> */}
+      <div className="wrapper">
+        <GeometricBackground />
         <Navigation />
         <HomePage />
         <AboutPage />

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import HamburgerBtn from "../Navbar/HamburgerBtn";
-import styles from "./NavSmallDevices.module.scss";
-import { Link as ScrollLink } from "react-scroll";
-import Link from "next/link";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import React, { useEffect, useState } from 'react';
+
+import HamburgerBtn from '../Navbar/HamburgerBtn';
+import Link from 'next/link';
+import { MdEmail } from 'react-icons/md';
+import { Link as ScrollLink } from 'react-scroll';
+import styles from './NavSmallDevices.module.scss';
+
 const NavSmallDevices = () => {
   const [isMenuClicked, setIsMenuClicked] = useState<boolean>(false);
   const handleClick = () => {
@@ -12,8 +14,8 @@ const NavSmallDevices = () => {
   };
   useEffect(() => {
     isMenuClicked
-      ? document.body.classList.add("preventScroll")
-      : document.body.classList.remove("preventScroll");
+      ? document.body.classList.add('preventScroll')
+      : document.body.classList.remove('preventScroll');
   }, [isMenuClicked]);
 
   return (
@@ -21,7 +23,7 @@ const NavSmallDevices = () => {
       <HamburgerBtn isMenuClicked={isMenuClicked} handleClick={handleClick} />
       <div
         className={`${styles.navigation} ${
-          isMenuClicked ? styles.clicked : ""
+          isMenuClicked ? styles.clicked : ''
         }`}
       >
         <div className={styles.navBg}></div>
@@ -61,6 +63,15 @@ const NavSmallDevices = () => {
         >
           Projects
         </ScrollLink>
+        <Link
+          href={
+            'https://drive.google.com/file/d/196US_VIjN4_4r-ZEf5Otl1xAYWt17wvv/view?usp=sharing'
+          }
+          className={styles.navLink}
+          target={'_blank'}
+        >
+          Resume
+        </Link>
         <ScrollLink
           to="contact"
           activeClass={styles.active}
@@ -73,21 +84,19 @@ const NavSmallDevices = () => {
         >
           Contact
         </ScrollLink>
+
         <div className={styles.contactIcons}>
-          <Link href={"https://www.linkedin.com/in/markovskiL/"}>
-            <a target={"_blank"}>
-              <BsLinkedin className={styles.linkedIn} size={"2rem"} />
-            </a>
+          <Link
+            href={'https://www.linkedin.com/in/markovskiL/'}
+            target={'_blank'}
+          >
+            <BsLinkedin className={styles.linkedIn} size={'2rem'} />
           </Link>
-          <Link href={"https://github.com/markovskiL"}>
-            <a target={"_blank"}>
-              <BsGithub className={styles.gitHub} size={"2rem"} />
-            </a>
+          <Link href={'https://github.com/markovskiL'} target={'_blank'}>
+            <BsGithub className={styles.gitHub} size={'2rem'} />
           </Link>
-          <Link href={"mailto: markovski.dev@gmail.com"}>
-            <a>
-              <MdEmail size={"2rem"} />
-            </a>
+          <Link href={'mailto: markovski.dev@gmail.com'}>
+            <MdEmail size={'2rem'} />
           </Link>
         </div>
       </div>

@@ -1,4 +1,4 @@
-@import "../../../styles/colors.module.scss";
+@import '../../../styles/colors.module.scss';
 .NavigationLargeDevices {
   width: 100%;
   height: 55px;
@@ -46,6 +46,10 @@
     }
     .email:hover {
       color: $danger-primary;
+    }
+    .resume {
+      font-size: 1.4rem;
+      color: $gray-primary;
     }
   }
 }

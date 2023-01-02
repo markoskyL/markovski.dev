@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import styles from './ProjectCard.module.scss';
+import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
+
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
-import Link from 'next/link';
-import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
 import LightBox from '../../LightBox/LightBox';
+import Link from 'next/link';
+import styles from './ProjectCard.module.scss';
+
 export interface ProjectCardProps {
   id: string;
   title: string;
@@ -59,16 +61,20 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           </div>
         </div>
         <div className={styles.linksWrapper}>
-          <Link href={props.websiteURL}>
-            <a className={styles.website} target="_blank">
-              Website
-              <BiGlobe size={'1.3rem'} />
-            </a>
+          <Link
+            href={props.websiteURL}
+            className={styles.website}
+            target="_blank"
+          >
+            Website
+            <BiGlobe size={'1.3rem'} />
           </Link>
-          <Link href={props.githubURL}>
-            <a className={styles.github} target="_blank">
-              Github <FaGithub size={'1.3rem'} />
-            </a>
+          <Link
+            href={props.githubURL}
+            className={styles.github}
+            target="_blank"
+          >
+            Github <FaGithub size={'1.3rem'} />
           </Link>
         </div>
       </div>

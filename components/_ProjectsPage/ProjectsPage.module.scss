@@ -1,5 +1,6 @@
-@import "../../styles/colors.module.scss";
-@import "../../styles/breakpoints.module.scss";
+@import '../../styles/breakpoints.module.scss';
+@import '../../styles/colors.module.scss';
+
 .projects {
   position: relative;
   background: $yellow-light;
@@ -7,10 +8,10 @@
   display: flex;
   justify-content: center;
   overflow-wrap: break-word;
+
   .projectsInner {
     max-width: 50vw;
     min-width: 800px;
-
     @media screen and (max-width: $laptop-S) {
       min-width: 75vw;
     }
@@ -24,7 +25,6 @@
     .pagePretitle {
       margin-bottom: 8rem;
       color: $yellow-primary;
-
       @media screen and (max-width: $phone-L) {
         min-width: 85vw;
         margin-bottom: 4rem;

@@ -2,28 +2,30 @@
 @import '../../styles/colors.module.scss';
 .aboutWrapper {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh + 100px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: $yellow-primary;
-  .whiteTriangleWrap {
+
+  .whiteTriangleBottom {
     position: absolute;
-    top: -2px;
-    right: 0;
-    height: calc(100% + 4px);
     width: 100%;
-    filter: drop-shadow(-47px 22px 10px rgba(0, 0, 0, 0.18));
-    .whiteTriangle {
-      height: 100%;
-      width: 100%;
-      background-color: $yellow-light;
-      z-index: 10;
-      -webkit-clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
-      clip-path: polygon(79% 0, 100% 0, 100% 100%, 39% 100%);
-    }
+    height: 80px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    bottom: 0;
+    background-color: $yellow-light;
   }
+  .whiteTriangleTop {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    top: 0;
+    background-color: $yellow-light;
+  }
+
   .aboutInner {
     z-index: 10;
     position: relative;

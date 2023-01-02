@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from './AboutPage.module.scss';
-// import leoImg from "/images/Vector.png";
+
 const AboutPage = () => {
   return (
     <div className={styles.aboutWrapper} id="about">
-      <div className={styles.whiteTriangleWrap}>
-        <div className={styles.whiteTriangle}></div>
-      </div>
+      <div className={styles.whiteTriangleTop}></div>
+      <div className={styles.whiteTriangleBottom}></div>
+
       <div className={styles.aboutInner}>
         <h1>about.</h1>
         <div className={styles.textAndImgWrapper}>

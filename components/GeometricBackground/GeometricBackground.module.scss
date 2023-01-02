@@ -1,13 +1,41 @@
 // @import "../../../styles/colors.module.scss";
-.backgroundRight {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-.backgroundLeft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+@import '../../styles/breakpoints.module.scss';
+.geoBgWrapper {
+  .backgroundRight {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    z-index: 1;
+  }
+  .backgroundLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .bgLargeDesktop {
+    @media screen and (max-width: $desktop-XL) {
+      display: none;
+    }
+  }
+
+  .bgDesktop {
+    display: none;
+    @media screen and (min-width: $laptop-S) and (max-width: $desktop-XL) {
+      display: block;
+    }
+  }
+  .bgSmallLaptop {
+    display: none;
+    @media screen and (min-width: $tablet-M) and (max-width: $laptop-S) {
+      display: block;
+    }
+  }
+  .bgPhone {
+    display: none;
+    @media screen and (max-width: $tablet-M) {
+      display: block;
+    }
+  }
 }

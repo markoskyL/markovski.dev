@@ -1,9 +1,10 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Options } from '@splidejs/splide';
 import React, { ReactNode, useEffect } from 'react';
-import styles from './_SplideThumbnail.module.scss';
-import Image from 'next/image';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import Image from 'next/legacy/image';
+import { Options } from '@splidejs/splide';
 import { imageDataProps } from '../SplideSlider/SplideSlider';
+import styles from './_SplideThumbnail.module.scss';
 
 interface props {
   imagesArray: imageDataProps[];
@@ -34,6 +35,7 @@ export const SplideThumbnail: React.FC<props> = ({
           src={img.src}
           placeholder={'blur'}
           blurDataURL={img.base64}
+
         />
       </SplideSlide>
     ));
