@@ -1,5 +1,6 @@
-@import "../../styles/colors.module.scss";
-@import "../../styles/breakpoints.module.scss";
+@import '../../styles/breakpoints.module.scss';
+@import '../../styles/colors.module.scss';
+
 .Footer {
   display: flex;
   justify-content: center;
@@ -8,7 +9,7 @@
   color: $yellow-light;
   text-align: center;
   padding: 1rem 0;
-  font-family: monospace, Arial, Helvetica, sans-serif;
+  font-family: monospace, monospace;
   @media screen and (max-width: $tablet-XS) {
     flex-direction: column;
     gap: 0.5rem;

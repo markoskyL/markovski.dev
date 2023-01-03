@@ -1,7 +1,9 @@
-import axios from "axios";
 import React, { FormEvent, useState } from "react";
-import styles from "./ContactPage.module.scss";
+
+import { F_arialBlack } from "../../assets/fonts/appFonts";
 import SuccessModal from "./SuccessModal/SuccessModal";
+import axios from "axios";
+import styles from "./ContactPage.module.scss";
 
 const ContactPage = () => {
   const [name, setName] = useState<string>("");
@@ -48,7 +50,7 @@ const ContactPage = () => {
       {success && (
         <SuccessModal setSuccess={(value: boolean) => setSuccess(value)} />
       )}
-      <div className={styles.contactInner}>
+      <div className={`${styles.contactInner} ${F_arialBlack.className}`}>
         <h1 className={styles.pageTitle}>contact.</h1>
         <h2 className={styles.pagePreTitle}>
           Have a question or want to work together ?

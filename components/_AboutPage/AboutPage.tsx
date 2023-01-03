@@ -1,3 +1,5 @@
+import { F_Montserrat, F_arialBlack } from '../../assets/fonts/appFonts';
+
 import Image from 'next/image';
 import React from 'react';
 import styles from './AboutPage.module.scss';
@@ -9,12 +11,12 @@ const AboutPage = () => {
       <div className={styles.whiteTriangleBottom}></div>
 
       <div className={styles.aboutInner}>
-        <h1>about.</h1>
+        <h1 className={F_arialBlack.className}>about.</h1>
         <div className={styles.textAndImgWrapper}>
-          <div className={styles.textContainer}>
+          <div className={`${styles.textContainer} ${F_Montserrat.className}`}>
             <p>
               {' '}
-              Hi! I am <span className={styles.name}>Leonardo</span>
+              Hi! I am <span className={F_arialBlack.className}>Leonardo</span>
             </p>
             <p>
               Front-end developer based in Germany and a graduate of the

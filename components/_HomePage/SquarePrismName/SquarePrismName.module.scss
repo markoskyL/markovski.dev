@@ -1,5 +1,5 @@
-@import "../../../styles/colors.module.scss";
-@import "../../../styles/breakpoints.module.scss";
+@import '../../../styles/breakpoints.module.scss';
+@import '../../../styles/colors.module.scss';
 
 .containerWrapper {
   display: flex;
@@ -52,7 +52,6 @@
         position: absolute;
         height: 100%;
         p {
-          font-family: "Arial Black";
           font-size: 5rem;
           position: absolute;
           top: 50%;

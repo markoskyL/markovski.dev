@@ -43,7 +43,6 @@
       font-size: 1.8rem;
     }
     .description {
-      font-family: 'Montserrat';
       margin: 1rem 0;
       @media screen and (min-width: $desktop-XL) {
         font-size: 1.2rem;
@@ -55,7 +54,6 @@
       margin: 1rem 0;
       gap: 0.7rem;
       .technology {
-        font-family: 'Montserrat';
         padding: 0.3rem;
         border: 3px solid $yellow-primary;
         border-radius: 5px;

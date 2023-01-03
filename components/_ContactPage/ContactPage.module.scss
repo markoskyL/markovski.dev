@@ -1,5 +1,6 @@
-@import "../../styles/colors.module.scss";
-@import "../../styles/breakpoints.module.scss";
+@import '../../styles/breakpoints.module.scss';
+@import '../../styles/colors.module.scss';
+
 .contact {
   position: relative;
   background-color: $yellow-primary;
@@ -41,7 +42,7 @@
         cursor: pointer;
       }
       label::after {
-        content: "";
+        content: '';
         cursor: auto;
         position: absolute;
         top: 40px;
@@ -65,7 +66,7 @@
         border: 2px solid black;
         z-index: 10;
         font-size: 1rem;
-        font-family: monospace, Arial, Helvetica, sans-serif;
+        font-family: monospace, monospace;
       }
       textarea {
         resize: none;
@@ -85,7 +86,7 @@
       margin-top: 3rem;
       padding: 0.5rem;
       border: 2px solid black;
-      font-family: "Arial Black", Arial, Helvetica, sans-serif;
+      font-family: 'Arial Black', Arial, Helvetica, sans-serif;
       font-size: 1rem;
       cursor: pointer;
       background-color: $yellow-light;

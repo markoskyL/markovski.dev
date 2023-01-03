@@ -1,3 +1,4 @@
+import { F_Montserrat, F_arialBlack } from '../../../assets/fonts/appFonts';
 import React, { useEffect, useState } from 'react';
 import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
 
@@ -50,9 +51,13 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 
       <div className={styles.projectInfo}>
         <div>
-          <h2 className={styles.title}>{props.title}</h2>
-          <p className={styles.description}>{props.description}</p>
-          <div className={styles.technologies}>
+          <h2 className={`${styles.title} ${F_arialBlack.className}`}>
+            {props.title}
+          </h2>
+          <p className={`${styles.description} ${F_Montserrat.className}`}>
+            {props.description}
+          </p>
+          <div className={`${styles.technologies} ${F_Montserrat.className}`}>
             {props.technologies.map((tech) => (
               <span className={styles.technology} key={tech}>
                 {tech}
@@ -60,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
             ))}
           </div>
         </div>
-        <div className={styles.linksWrapper}>
+        <div className={`${styles.linksWrapper} ${F_arialBlack.className}`}>
           <Link
             href={props.websiteURL}
             className={styles.website}

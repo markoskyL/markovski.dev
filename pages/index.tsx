@@ -10,9 +10,11 @@ import { ProjectCardProps } from '../components/_ProjectsPage/ProjectCard/Projec
 import ProjectsPage from '../components/_ProjectsPage/ProjectsPage';
 import data from '../assets/projects.json';
 import { getPlaiceholder } from 'plaiceholder';
+
 interface props {
   imagesData: ProjectCardProps[];
 }
+
 const MarkovskiDev: NextPage<props> = ({ imagesData }) => {
   return (
     <>
