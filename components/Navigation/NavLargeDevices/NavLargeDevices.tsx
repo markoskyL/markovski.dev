@@ -82,7 +82,7 @@ const NavLargeDevices = () => {
       </ScrollLink>
 
       <div className={styles.contactIcons}>
-        <Link
+        {/* <Link
           href={
             'https://drive.google.com/file/d/196US_VIjN4_4r-ZEf5Otl1xAYWt17wvv/view?usp=sharing'
           }
@@ -90,7 +90,7 @@ const NavLargeDevices = () => {
           target={'_blank'}
         >
           CV
-        </Link>
+        </Link> */}
         <Link href={'https://www.linkedin.com/in/markovskiL'} target={'_blank'}>
           <BsLinkedin className={styles.linkedIn} size={'1.3rem'} />
         </Link>

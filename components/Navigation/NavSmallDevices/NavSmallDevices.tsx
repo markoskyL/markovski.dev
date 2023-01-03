@@ -1,10 +1,10 @@
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import React, { useEffect, useState } from 'react';
-
-import HamburgerBtn from '../Navbar/HamburgerBtn';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { Link as ScrollLink } from 'react-scroll';
+
+import HamburgerBtn from '../Navbar/HamburgerBtn';
 import styles from './NavSmallDevices.module.scss';
 
 const NavSmallDevices = () => {
@@ -63,15 +63,6 @@ const NavSmallDevices = () => {
         >
           Projects
         </ScrollLink>
-        <Link
-          href={
-            'https://drive.google.com/file/d/196US_VIjN4_4r-ZEf5Otl1xAYWt17wvv/view?usp=sharing'
-          }
-          className={styles.navLink}
-          target={'_blank'}
-        >
-          Resume
-        </Link>
         <ScrollLink
           to="contact"
           activeClass={styles.active}
