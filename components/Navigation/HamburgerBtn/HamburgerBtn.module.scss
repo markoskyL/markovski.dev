@@ -1,0 +1,52 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.hamburgerBtn {
+  position: absolute;
+  z-index: 9999;
+  top: 2.5rem;
+  right: 2rem;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+  @media screen and (max-width: $tablet-XL) {
+    display: flex;
+  }
+  cursor: pointer;
+  .line {
+    width: 35px;
+    height: 4px;
+    background-color: black;
+    transition: 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+    border-radius: 2px;
+  }
+
+  &.clicked {
+    .line {
+      &:nth-child(1) {
+        transform: translateY(0.55em) rotate(45deg);
+        -webkit-transform: translateY(0.55em) rotate(45deg);
+        -moz-transform: translateY(0.55em) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: scale(0.1);
+        -webkit-transform: scale(0.1);
+        -moz-transform: scale(0.1);
+      }
+      &:nth-child(3) {
+        transform: translateY(-0.59em) rotate(135deg);
+        -webkit-transform: translateY(-0.59em) rotate(135deg);
+        -moz-transform: translateY(-0.5em) rotate(135deg);
+      }
+    }
+  }
+}
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

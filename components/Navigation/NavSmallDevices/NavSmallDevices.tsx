@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import React, { useEffect, useState } from 'react';
+
+import HamburgerBtn from '../HamburgerBtn/HamburgerBtn';
+import Link from 'next/link';
 import { MdEmail } from 'react-icons/md';
 import { Link as ScrollLink } from 'react-scroll';
-
-import HamburgerBtn from '../Navbar/HamburgerBtn';
 import styles from './NavSmallDevices.module.scss';
 
 const NavSmallDevices = () => {

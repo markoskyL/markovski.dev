@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./HamburgerBtn.module.scss";
+import React from 'react';
+import styles from './HamburgerBtn.module.scss';
 interface Props {
   isMenuClicked: boolean;
   handleClick: () => void;
@@ -8,8 +8,8 @@ const HamburgerBtn: React.FC<Props> = ({ isMenuClicked, handleClick }) => {
   return (
     <>
       <div
-        className={`${styles.hamburgerBtn} ${
-          isMenuClicked ? styles.clicked : ""
+        className={`${styles.hamburgerBtn} ${styles.noSelect} ${
+          isMenuClicked ? styles.clicked : ''
         }`}
         onClick={handleClick}
       >
