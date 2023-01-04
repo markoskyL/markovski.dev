@@ -38,7 +38,7 @@ const NavLargeDevices = () => {
         activeClass={styles.active}
         spy={true}
         smooth={true}
-        offset={-100}
+        offset={-10}
         duration={-200}
         className={styles.navLink}
       >
@@ -50,7 +50,7 @@ const NavLargeDevices = () => {
         activeClass={styles.active}
         spy={true}
         smooth={true}
-        offset={-100}
+        offset={-10}
         duration={200}
         className={styles.navLink}
       >
@@ -62,7 +62,7 @@ const NavLargeDevices = () => {
         activeClass={styles.active}
         spy={true}
         smooth={true}
-        offset={-100}
+        offset={-10}
         duration={200}
         className={styles.navLink}
       >
@@ -74,9 +74,10 @@ const NavLargeDevices = () => {
         activeClass={styles.active}
         spy={true}
         smooth={true}
-        offset={-100}
+        offset={-10}
         duration={200}
         className={styles.navLink}
+        hashSpy={true}
       >
         Contact
       </ScrollLink>
@@ -97,7 +98,7 @@ const NavLargeDevices = () => {
         <Link href={'https://github.com/markovskiL'} target={'_blank'}>
           <BsGithub className={styles.gitHub} size={'1.3rem'} />
         </Link>
-        <Link href={'mailto: markovski.dev@gmail.com'}>
+        <Link href={'mailto:markovski.dev@gmail.com'}>
           <MdEmail className={styles.email} size={'1.3rem'} />
         </Link>
       </div>

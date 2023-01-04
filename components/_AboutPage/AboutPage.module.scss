@@ -67,6 +67,33 @@
             font-size: 1.2rem;
           }
         }
+        .resumeLink {
+          width: 100%;
+          max-width: 150px;
+          .resume {
+            width: 100%;
+            font-size: 1.1rem;
+            background-color: $yellow-light;
+            opacity: 0.75;
+            color: $black;
+            padding: 0.3rem;
+            margin-top: 0.7rem;
+            transition: opacity 0.2s ease-in-out;
+            cursor: pointer;
+            outline: none;
+            border: 2px solid $black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              opacity: 1;
+              outline: 1px solid $black;
+            }
+            .eyeIcon {
+              margin-left: 5px;
+            }
+          }
+        }
       }
       .imageWrapper {
         width: 23%;

@@ -86,7 +86,7 @@ const NavSmallDevices = () => {
           <Link href={'https://github.com/markovskiL'} target={'_blank'}>
             <BsGithub className={styles.gitHub} size={'2rem'} />
           </Link>
-          <Link href={'mailto: markovski.dev@gmail.com'}>
+          <Link href={'mailto:markovski.dev@gmail.com'}>
             <MdEmail size={'2rem'} />
           </Link>
         </div>

@@ -1,6 +1,8 @@
 import { F_Montserrat, F_arialBlack } from '../../assets/fonts/appFonts';
 
+import { HiDocumentText } from 'react-icons/hi';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import styles from './AboutPage.module.scss';
 
@@ -32,6 +34,12 @@ const AboutPage = () => {
               having experience in both fields allows for making the most
               optimal user experiences.
             </p>
+            <Link href={'resume/LM_Resume.pdf'} className={`${styles.resumeLink}`}>
+              <button className={`${styles.resume} ${F_arialBlack.className}`}>
+                Resume
+                <HiDocumentText className={styles.eyeIcon} />
+              </button>
+            </Link>
           </div>
           <div className={styles.imageWrapper}>
             <img src={'/images/Vector.png'} alt="Leonardo Markovski Image" />

@@ -20,7 +20,7 @@
     ],
     "websiteURL": "https://cointracker-e6b9e.web.app/overview",
     "githubURL": "https://github.com/markovskiL/CoinTracker",
-    "technologies": ["React", "Material-UI", "CSS", "Firebase"]
+    "technologies": ["React", "MUI", "CSS", "Firebase"]
   },
 
   {
