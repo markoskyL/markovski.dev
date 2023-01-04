@@ -29,13 +29,6 @@ h1 {
   /* text-align: center; */
 }
 
-@font-face {
-  font-family: 'Arial Black';
-  src: url('../assets/fonts/ArialCEMTBlack.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-
 .splide__slide {
   opacity: 0.6;
 }
