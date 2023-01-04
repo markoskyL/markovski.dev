@@ -1,30 +1,30 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useState } from 'react';
 
-import { F_arialBlack } from "../../assets/fonts/appFonts";
-import SuccessModal from "./SuccessModal/SuccessModal";
-import axios from "axios";
-import styles from "./ContactPage.module.scss";
+import { F_arialBlack } from '../../assets/fonts/appFonts';
+import SuccessModal from './SuccessModal/SuccessModal';
+import axios from 'axios';
+import styles from './ContactPage.module.scss';
 
 const ContactPage = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
   const [success, setSuccess] = useState<boolean>(false);
   const [sending, setSending] = useState<boolean>(false);
 
   const handleSuccess = () => {
     setSuccess(true);
-    document.body.classList.add("preventScroll");
-    setName("");
-    setEmail("");
-    setMessage("");
+    document.body.classList.add('preventScroll');
+    setName('');
+    setEmail('');
+    setMessage('');
   };
 
   const handleSubmit = (e: FormEvent) => {
     setSending(true);
-    axios.defaults.headers.post["Content-Type"] = "application/json";
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
     axios
-      .post("https://formsubmit.co/ajax/markovski.dev@gmail.com", {
+      .post('https://formsubmit.co/ajax/markovski.dev@gmail.com', {
         name: name,
         email: email,
         message: message,
@@ -36,7 +36,7 @@ const ContactPage = () => {
 
       .catch(() => {
         alert(
-          "There was a problem sending your message please try again later"
+          'There was a problem sending your message please try again later'
         );
         setSending(false);
       });
@@ -64,7 +64,7 @@ const ContactPage = () => {
           <input type="hidden" name="_contact" value="New submission!" />
           <input type="hidden" name="_template" value="table"></input>
           <input type="hidden" name="_captcha" value="false"></input>
-          <input type="text" name="_honey" style={{ display: "none" }}></input>
+          <input type="text" name="_honey" style={{ display: 'none' }}></input>
           <div className={styles.name_emailWrapper}>
             <div className={styles.label_inputWrapper}>
               <label htmlFor="name">Your Name</label>
@@ -103,8 +103,12 @@ const ContactPage = () => {
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
-          <button className={styles.submitBtn} type="submit" disabled={sending}>
-            {!sending ? "Submit" : "Sending..."}
+          <button
+            className={`${styles.submitBtn} ${F_arialBlack.className}`}
+            type="submit"
+            disabled={sending}
+          >
+            {!sending ? 'Submit' : 'Sending...'}
           </button>
         </form>
       </div>

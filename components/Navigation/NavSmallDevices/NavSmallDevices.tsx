@@ -33,7 +33,7 @@ const NavSmallDevices = () => {
           spy={true}
           smooth={true}
           duration={200}
-          offset={0}
+          offset={-10}
           className={styles.navLink}
           onClick={handleClick}
         >
@@ -45,7 +45,7 @@ const NavSmallDevices = () => {
           spy={true}
           smooth={true}
           duration={200}
-          offset={0}
+          offset={-10}
           className={styles.navLink}
           onClick={handleClick}
         >
@@ -57,7 +57,7 @@ const NavSmallDevices = () => {
           spy={true}
           smooth={true}
           duration={200}
-          offset={0}
+          offset={-10}
           className={styles.navLink}
           onClick={handleClick}
         >
@@ -69,7 +69,7 @@ const NavSmallDevices = () => {
           spy={true}
           smooth={true}
           duration={200}
-          offset={0}
+          offset={-10}
           className={styles.navLink}
           onClick={handleClick}
         >
