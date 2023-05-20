@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Nomad Jobs",
-    "description": "Nomad Jobs is a functional job platform designed to connect job seekers with companies worldwide. The site offers job filters that allow users to quickly find job postings that match their skills and interests. Users can easily apply for jobs with or without a profile, and the contact page makes it simple to connect with potential employers. The platform also features a company page, where businesses can showcase their organization and provide users with valuable insights into their company culture. With its range of features and resources, Nomad Jobs is the perfect destination for anyone looking to take their career to new heights.",
+    "description": "Nomad Jobs is a job platform designed to connect job seekers with companies. The site offers job filters that allow users to find job postings that match their skills. Users can easily apply for jobs with or without a profile, and the contact page makes it simple to connect with potential employers.",
     "imgSrc": [
       "/images/nomadjobs/nomadjobs_macbook_1.png",
       "/images/nomadjobs/nomadjobs_macbook_2.png",
@@ -20,12 +20,12 @@
     ],
     "websiteURL": "https://nomadjobs.kg",
     "githubURL": "",
-    "technologies": ["NEXT JS", "SCSS", "Laravel"]
+    "technologies": ["NEXT JS", "Typescript", "SCSS", "Laravel"]
   },
   {
     "id": "2",
     "title": "Shumi Berovo",
-    "description": "Shumi Berovo's website serves as a platform for showcasing their honey products and facilitating communication between the owner and potential clients. The homepage features a range of high-quality honey products with detailed information. Clients can easily navigate to the contact page to send a message to the owner and inquire about making a purchase. Shumi Berovo's website offers a seamless user experience, making it easy for clients to discover their products.",
+    "description": "Shumi Berovo's website serves as a platform for showcasing their honey products and facilitating communication between the owner and potential clients. Shumi Berovo's website offers a seamless user experience, making it easy for clients to discover their products.",
     "imgSrc": [
       "/images/shumi/shumi_macbook_1.png",
       "/images/shumi/shumi_macbook_2.png",
@@ -44,7 +44,7 @@
     ],
     "websiteURL": "https://shu-mi.com.mk/en",
     "githubURL": "",
-    "technologies": ["NEXT JS", "SCSS", "Laravel"]
+    "technologies": ["NEXT JS", "Typescript", "SCSS", "Laravel"]
   },
   {
     "id": "3",

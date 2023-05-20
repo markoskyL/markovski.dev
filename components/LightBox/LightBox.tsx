@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
+import { GrClose } from 'react-icons/gr';
+
+import { imageDataProps } from '../SplideSlider/SplideSlider';
 import { SplideThumbnail } from '../SplideThumbnail/SplideThumbnail';
 import styles from './_LightBox.module.scss';
-import { GrClose } from 'react-icons/gr';
-import { imageDataProps } from '../SplideSlider/SplideSlider';
 
 interface props {
   images: imageDataProps[];
@@ -11,7 +12,6 @@ interface props {
 }
 const LightBox: React.FC<props> = ({ images, onClose, currentIndex }) => {
   const lightBoxRef = useRef(null);
-
   return (
     <div
       className={styles.lightBox}

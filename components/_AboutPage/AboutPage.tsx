@@ -1,9 +1,9 @@
-import { F_Montserrat, F_arialBlack } from '../../assets/fonts/appFonts';
-
-import { HiDocumentText } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { HiDocumentText } from 'react-icons/hi';
+
+import { F_arialBlack, F_Montserrat } from '../../assets/fonts/appFonts';
 import styles from './AboutPage.module.scss';
 
 const AboutPage = () => {
@@ -21,7 +21,7 @@ const AboutPage = () => {
               Hi! I am <span className={F_arialBlack.className}>Leonardo</span>
             </p>
             <p>
-              Front-end developer based in Germany and a graduate of the
+              Front-end developer based in Macedonia and a graduate of the
               Brainster Front-end Academy.
             </p>
             <p>

@@ -1,11 +1,11 @@
-import { F_Montserrat, F_arialBlack } from '../../../assets/fonts/appFonts';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
-
 import { BiGlobe } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa';
+
+import { F_arialBlack, F_Montserrat } from '../../../assets/fonts/appFonts';
 import LightBox from '../../LightBox/LightBox';
-import Link from 'next/link';
+import SplideSlider, { imageDataProps } from '../../SplideSlider/SplideSlider';
 import styles from './ProjectCard.module.scss';
 
 export interface ProjectCardProps {
@@ -27,7 +27,6 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const handleClick = () => {
     setLightBox((prev) => !prev);
   };
-
   useEffect(() => {
     lightBox
       ? document.body.classList.add('preventScroll')
